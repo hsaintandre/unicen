@@ -141,7 +141,7 @@ void interrupt ints_isr(void){
                         mem_write(0xFF76 + 7*o,ds_get(0x04)); //day
                         mem_write(0xFF77 + 7*o,ds_get(0x05)); //month
                         mem_write(0xFF78 + 7*o,ds_get(0x06)); //year
-                        mem_write(0xFF79 + 7*o,mem_read(0x000A));
+                        mem_write(0xFF79 + 7*o,mem_read(0x000A));   //saves also the amount data
                         mem_write(0xFF7A + 7*o,mem_read(0x000B));
                         o++;
                         mem_write(0x0003,o);
