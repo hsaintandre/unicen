@@ -1,0 +1,5 @@
+ build/default/debug/ds1307.d  \
+ build/default/debug/ds1307.p1:  \
+ ds1307.c  \
+ds1307.h  \
+i2clib.h 

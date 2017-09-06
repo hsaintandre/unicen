@@ -1,0 +1,622 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 6 ]
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\24lc512.c
+[v _mem_write mem_write `(v  1 e 1 0 ]
+[v i1_mem_write mem_write `(v  1 e 1 0 ]
+"34
+[v _mem_read mem_read `(uc  1 e 1 0 ]
+[v i1_mem_read mem_read `(uc  1 e 1 0 ]
+"464 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\i2clib.c
+[v _i2c_init i2c_init `(v  1 e 1 0 ]
+"24
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+[v i1_i2c_start i2c_start `(v  1 e 1 0 ]
+"29
+[v _i2c_rstart i2c_rstart `(v  1 e 1 0 ]
+"34
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+[v i1_i2c_stop i2c_stop `(v  1 e 1 0 ]
+"39
+[v _i2c_write i2c_write `(uc  1 e 1 0 ]
+[v i1_i2c_write i2c_write `(uc  1 e 1 0 ]
+"51
+[v _i2c_read i2c_read `(uc  1 e 1 0 ]
+[v i1_i2c_read i2c_read `(uc  1 e 1 0 ]
+"20 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _uart_init uart_init `(v  1 e 1 0 ]
+"33
+[v _putch putch `(v  1 e 1 0 ]
+"39
+[v _clear_mem clear_mem `(v  1 e 1 0 ]
+"43
+[v _give_all give_all `(v  1 e 1 0 ]
+"63
+[v _to_work to_work `(v  1 e 1 0 ]
+"102
+[v _uart_isr uart_isr `(v  1 e 1 0 ]
+"129
+[v _tmr2_isr tmr2_isr `(v  1 e 1 0 ]
+"159
+[v _ints_isr ints_isr `II(v  1 e 1 0 ]
+"169
+[v _init_timer2 init_timer2 `(v  1 e 1 0 ]
+"179
+[v _mem_init mem_init `(v  1 e 1 0 ]
+"191
+[v _main main `(i  1 e 2 0 ]
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\si7021.c
+[v _si_reset si_reset `(v  1 e 1 0 ]
+"20
+[v _si_read_h si_read_h `(i  1 e 2 0 ]
+"37
+[v _si_read_t si_read_t `(i  1 e 2 0 ]
+[s S240 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"181 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f886.h
+[u S249 . 1 `S240 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES249  1 e 1 @5 ]
+[s S219 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"243
+[u S228 . 1 `S219 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES228  1 e 1 @6 ]
+"378
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S168 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"401
+[s S177 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S182 . 1 `S168 1 . 1 0 `S177 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES182  1 e 1 @11 ]
+[s S142 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"472
+[u S150 . 1 `S142 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES150  1 e 1 @12 ]
+"691
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"762
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+[s S467 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"789
+[s S473 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S478 . 1 `S467 1 . 1 0 `S473 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES478  1 e 1 @20 ]
+[s S98 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"987
+[s S107 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S111 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S114 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S117 . 1 `S98 1 . 1 0 `S107 1 . 1 0 `S111 1 . 1 0 `S114 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES117  1 e 1 @24 ]
+"1052
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1059
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1335
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[s S299 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1352
+[u S308 . 1 `S299 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES308  1 e 1 @133 ]
+"1397
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[s S583 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1476
+[u S592 . 1 `S583 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES592  1 e 1 @135 ]
+[s S19 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1558
+[u S27 . 1 `S19 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES27  1 e 1 @140 ]
+"1702
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+[s S604 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"1836
+[u S613 . 1 `S604 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES613  1 e 1 @145 ]
+"1881
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1888
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+[s S494 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2071
+[s S503 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S508 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S514 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S519 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S524 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S529 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S534 . 1 `S494 1 . 1 0 `S503 1 . 1 0 `S508 1 . 1 0 `S514 1 . 1 0 `S519 1 . 1 0 `S524 1 . 1 0 `S529 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES534  1 e 1 @148 ]
+[s S38 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2422
+[s S47 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S51 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S54 . 1 `S38 1 . 1 0 `S47 1 . 1 0 `S51 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES54  1 e 1 @152 ]
+"2482
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2544
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
+[s S75 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3192
+[u S84 . 1 `S75 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES84  1 e 1 @391 ]
+[s S284 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+]
+"3241
+[u S290 . 1 `S284 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES290  1 e 1 @392 ]
+[s S267 . 1 `uc 1 ANS8 1 0 :1:0 
+`uc 1 ANS9 1 0 :1:1 
+`uc 1 ANS10 1 0 :1:2 
+`uc 1 ANS11 1 0 :1:3 
+`uc 1 ANS12 1 0 :1:4 
+`uc 1 ANS13 1 0 :1:5 
+]
+"3286
+[u S274 . 1 `S267 1 . 1 0 ]
+[v _ANSELHbits ANSELHbits `VES274  1 e 1 @393 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"362
+[v _hexpowers hexpowers `DC[4]ui  1 s 8 hexpowers ]
+"17 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _milis milis `uc  1 e 1 0 ]
+[v _led led `uc  1 e 1 0 ]
+"18
+[v _secs secs `ui  1 e 2 0 ]
+"191
+[v _main main `(i  1 e 2 0 ]
+{
+"212
+} 0
+"20
+[v _uart_init uart_init `(v  1 e 1 0 ]
+{
+"31
+} 0
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\si7021.c
+[v _si_reset si_reset `(v  1 e 1 0 ]
+{
+"18
+} 0
+"179 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _mem_init mem_init `(v  1 e 1 0 ]
+{
+"180
+[v mem_init@aux aux `uc  1 a 1 6 ]
+"189
+} 0
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\24lc512.c
+[v _mem_write mem_write `(v  1 e 1 0 ]
+{
+"14
+[v mem_write@add_l add_l `uc  1 a 1 4 ]
+[v mem_write@add_h add_h `uc  1 a 1 3 ]
+"13
+[v mem_write@add add `ui  1 p 2 0 ]
+[v mem_write@data data `uc  1 p 1 2 ]
+"32
+} 0
+"34
+[v _mem_read mem_read `(uc  1 e 1 0 ]
+{
+"36
+[v mem_read@add_l add_l `uc  1 a 1 4 ]
+[v mem_read@add_h add_h `uc  1 a 1 3 ]
+"35
+[v mem_read@rta rta `uc  1 a 1 2 ]
+"34
+[v mem_read@add add `ui  1 p 2 0 ]
+"48
+} 0
+"39 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\i2clib.c
+[v _i2c_write i2c_write `(uc  1 e 1 0 ]
+{
+[v i2c_write@datum datum `uc  1 a 1 wreg ]
+[v i2c_write@datum datum `uc  1 a 1 wreg ]
+[v i2c_write@ack ack `uc  1 p 1 32 ]
+[v i2c_write@datum datum `uc  1 a 1 41 ]
+"49
+} 0
+"34
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+{
+"37
+} 0
+"24
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+{
+"27
+} 0
+"51
+[v _i2c_read i2c_read `(uc  1 e 1 0 ]
+{
+[v i2c_read@ack ack `uc  1 a 1 wreg ]
+"52
+[v i2c_read@resp resp `uc  1 a 1 41 ]
+"51
+[v i2c_read@ack ack `uc  1 a 1 wreg ]
+"53
+[v i2c_read@flag flag `b  1 s 0 flag ]
+[v i2c_read@ack ack `uc  1 a 1 40 ]
+"63
+} 0
+"169 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _init_timer2 init_timer2 `(v  1 e 1 0 ]
+{
+[v init_timer2@pre pre `uc  1 a 1 wreg ]
+"170
+[v init_timer2@sfr sfr `uc  1 a 1 37 ]
+"169
+[v init_timer2@pre pre `uc  1 a 1 wreg ]
+[v init_timer2@post post `uc  1 p 1 32 ]
+[v init_timer2@eoc eoc `uc  1 p 1 33 ]
+[v init_timer2@pre pre `uc  1 a 1 36 ]
+"177
+} 0
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\i2clib.c
+[v _i2c_init i2c_init `(v  1 e 1 0 ]
+{
+"22
+} 0
+"159 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _ints_isr ints_isr `II(v  1 e 1 0 ]
+{
+"167
+} 0
+"102
+[v _uart_isr uart_isr `(v  1 e 1 0 ]
+{
+"105
+[v uart_isr@rcv rcv `uc  1 a 1 27 ]
+"104
+[v uart_isr@ferr ferr `b  1 s 0 ferr ]
+[v uart_isr@oerr oerr `b  1 s 0 oerr ]
+"127
+} 0
+"43
+[v _give_all give_all `(v  1 e 1 0 ]
+{
+"45
+[v give_all@aux aux `ui  1 a 2 24 ]
+[v give_all@n n `ui  1 a 2 22 ]
+[v give_all@add add `ui  1 a 2 20 ]
+"61
+} 0
+"464 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+[v printf@f f `*.24DCuc  1 a 1 wreg ]
+"1500
+[v printf@idx idx `uc  1 a 1 6 ]
+"501
+[v printf@width width `i  1 a 2 13 ]
+"528
+[v printf@val val `ui  1 a 2 9 ]
+"499
+[v printf@c c `c  1 a 1 15 ]
+"508
+[v printf@flag flag `uc  1 a 1 12 ]
+"506
+[v printf@prec prec `c  1 a 1 8 ]
+"466
+[v printf@ap ap `[1]*.4v  1 a 1 7 ]
+"464
+[v printf@f f `*.24DCuc  1 a 1 wreg ]
+"533
+[v printf@f f `*.24DCuc  1 a 1 11 ]
+"1541
+} 0
+"33 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 0 ]
+"37
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 0 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"39 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\panda17.c
+[v _clear_mem clear_mem `(v  1 e 1 0 ]
+{
+"41
+} 0
+"129
+[v _tmr2_isr tmr2_isr `(v  1 e 1 0 ]
+{
+"157
+} 0
+"63
+[v _to_work to_work `(v  1 e 1 0 ]
+{
+"66
+[v to_work@hum_add hum_add `ui  1 a 2 16 ]
+[v to_work@temp_add temp_add `ui  1 a 2 14 ]
+[v to_work@up up `ui  1 a 2 12 ]
+"67
+[v to_work@temp_val temp_val `ui  1 a 2 10 ]
+[v to_work@hum_val hum_val `ui  1 a 2 8 ]
+"65
+[v to_work@arg arg `uc  1 a 1 18 ]
+"100
+} 0
+"13 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\24lc512.c
+[v i1_mem_write mem_write `(v  1 e 1 0 ]
+{
+[v i1mem_write@add_l mem_write `uc  1 a 1 2 ]
+[v i1mem_write@add_h mem_write `uc  1 a 1 1 ]
+[v i1mem_write@add add `ui  1 p 2 10 ]
+[v i1mem_write@data data `uc  1 p 1 12 ]
+"32
+} 0
+"34
+[v i1_mem_read mem_read `(uc  1 e 1 0 ]
+{
+[v i1mem_read@add_l mem_read `uc  1 a 1 2 ]
+[v i1mem_read@add_h mem_read `uc  1 a 1 1 ]
+[v i1mem_read@rta mem_read `uc  1 a 1 0 ]
+[v i1mem_read@add add `ui  1 p 2 10 ]
+"48
+} 0
+"37 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\si7021.c
+[v _si_read_t si_read_t `(i  1 e 2 0 ]
+{
+"38
+[v si_read_t@rta rta `ui  1 a 2 4 ]
+"39
+[v si_read_t@rta_l rta_l `uc  1 a 1 3 ]
+[v si_read_t@rta_h rta_h `uc  1 a 1 2 ]
+"52
+} 0
+"20
+[v _si_read_h si_read_h `(i  1 e 2 0 ]
+{
+"21
+[v si_read_h@rta rta `ui  1 a 2 4 ]
+"22
+[v si_read_h@rta_l rta_l `uc  1 a 1 3 ]
+[v si_read_h@rta_h rta_h `uc  1 a 1 2 ]
+"35
+} 0
+"39 C:\Users\Horacio\Desktop\Hori\PAPA\Proyectos para PAPA\Sensor para la UNICEN\panda17\panda17.X\i2clib.c
+[v i1_i2c_write i2c_write `(uc  1 e 1 0 ]
+{
+[v i1i2c_write@datum datum `uc  1 a 1 wreg ]
+[v i1i2c_write@datum datum `uc  1 a 1 wreg ]
+[v i1i2c_write@ack ack `uc  1 p 1 0 ]
+[v i1i2c_write@datum datum `uc  1 a 1 9 ]
+"49
+} 0
+"34
+[v i1_i2c_stop i2c_stop `(v  1 e 1 0 ]
+{
+"37
+} 0
+"24
+[v i1_i2c_start i2c_start `(v  1 e 1 0 ]
+{
+"27
+} 0
+"51
+[v i1_i2c_read i2c_read `(uc  1 e 1 0 ]
+{
+[v i1i2c_read@ack ack `uc  1 a 1 wreg ]
+[v i1i2c_read@resp i2c_read `uc  1 a 1 9 ]
+[v i1i2c_read@ack ack `uc  1 a 1 wreg ]
+"54
+[v i1i2c_read@ack ack `uc  1 a 1 8 ]
+"63
+} 0
+"29
+[v _i2c_rstart i2c_rstart `(v  1 e 1 0 ]
+{
+"32
+} 0
