@@ -1,6 +1,6 @@
 /* 
  * File:   panda17.c
- * Author: Horacio
+ * Author: Horacio SA
  *
  * Created on 10 de agosto de 2017, 17:11
  */
