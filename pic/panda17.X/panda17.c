@@ -66,6 +66,7 @@ void interrupt ints_isr(void){
             case 'a':   //Send data saved
                 PORTBbits.RB4 = 1;
                 unsigned int add,n,aux;
+                unsigned char dt = 0;
                 add = mem_read(0x0A);
                 add = add << 8;
                 add += mem_read(0x0B);  //gets the amount of saved data
@@ -81,7 +82,14 @@ void interrupt ints_isr(void){
                     aux += mem_read(2*n+0x7FF8);
                     printf("%04x\r\n",aux);
                 }
-                printf("X");
+                printf("Z%x",mem_read(0x0003)); //prints the amount of events in hex format (always 2 bytes)
+                dt = mem_read(0x0003);
+                for (n=0;n<dt;n++){
+                    for ( unsigned char u;u<7;u++){
+                        printf("%x",mem_read(0xFF74 + u + 7*n));    //prints all
+                    }
+                }
+                printf("X");    //this determines the end of the transmision
                 PORTBbits.RB4 = 0;
                 break;
             case 'b':   //Set RTC date and time
@@ -134,14 +142,14 @@ void interrupt ints_isr(void){
             if(milis > 24){        //24 gives 1 sec @40ms
                 if (led > 0){ //led 15 secs turned on at the begining of the acquisition
                     if (led == 5){  //this is only executed when acq is started
-                        unsigned char o;
+                        unsigned char o;    //supports upto 10 events start/stop
                         o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
                         mem_write(0xFF74 + 7*o,ds_get(0x01)); //min
                         mem_write(0xFF75 + 7*o,ds_get(0x02)); //hour
                         mem_write(0xFF76 + 7*o,ds_get(0x04)); //day
                         mem_write(0xFF77 + 7*o,ds_get(0x05)); //month
                         mem_write(0xFF78 + 7*o,ds_get(0x06)); //year
-                        mem_write(0xFF79 + 7*o,mem_read(0x000A));
+                        mem_write(0xFF79 + 7*o,mem_read(0x000A));   //saves also the amount data
                         mem_write(0xFF7A + 7*o,mem_read(0x000B));
                         o++;
                         mem_write(0x0003,o);
