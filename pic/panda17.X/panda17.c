@@ -135,12 +135,14 @@ void interrupt ints_isr(void){
                 if (led > 0){ //led 15 secs turned on at the begining of the acquisition
                     if (led == 5){  //this is only executed when acq is started
                         unsigned char o;
-                        o = mem_read(0x0003);   //0xFF9C first time&date set, 0x0003 t&d counter
-                        mem_write(0xFF9C + 5*o,ds_get(0x01)); //min
-                        mem_write(0xFF9D + 5*o,ds_get(0x02)); //hour
-                        mem_write(0xFF9E + 5*o,ds_get(0x04)); //day
-                        mem_write(0xFF9F + 5*o,ds_get(0x05)); //month
-                        mem_write(0xFFA0 + 5*o,ds_get(0x06)); //year
+                        o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
+                        mem_write(0xFF74 + 7*o,ds_get(0x01)); //min
+                        mem_write(0xFF75 + 7*o,ds_get(0x02)); //hour
+                        mem_write(0xFF76 + 7*o,ds_get(0x04)); //day
+                        mem_write(0xFF77 + 7*o,ds_get(0x05)); //month
+                        mem_write(0xFF78 + 7*o,ds_get(0x06)); //year
+                        mem_write(0xFF79 + 7*o,mem_read(0x000A));
+                        mem_write(0xFF7A + 7*o,mem_read(0x000B));
                         o++;
                         mem_write(0x0003,o);
                     }
