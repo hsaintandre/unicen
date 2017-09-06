@@ -2217,6 +2217,7 @@ unsigned char aux;
 aux = mem_read(0x0002);
 if (aux != 0xAA){
 mem_write(0x0002,0xAA);
+mem_write(0x0003,0x00);
 mem_write(0x000A,0x00);
 mem_write(0x000B,0x00);
 mem_write(0x000C,0x00);
@@ -2224,7 +2225,6 @@ mem_write(0x000D,0x00);
 }
 }
 
-# 73
 void interrupt ints_isr(void){
 
 if (PIR1bits.RCIF){
@@ -2240,6 +2240,7 @@ switch (rcv){
 case 'a':
 PORTBbits.RB4 = 1;
 unsigned int add,n,aux;
+unsigned char dt = 0;
 add = mem_read(0x0A);
 add = add << 8;
 add += mem_read(0x0B);
@@ -2254,6 +2255,13 @@ aux = mem_read(2*n+0x7FF7);
 aux = aux << 8;
 aux += mem_read(2*n+0x7FF8);
 printf("%04x\r\n",aux);
+}
+printf("Z%x",mem_read(0x0003));
+dt = mem_read(0x0003);
+for (n=0;n<dt;n++){
+for ( unsigned char u;u<7;u++){
+printf("%x",mem_read(0xFF74 + u + 7*n));
+}
 }
 printf("X");
 PORTBbits.RB4 = 0;
@@ -2307,6 +2315,19 @@ if (PORTBbits.RB2){
 milis++;
 if(milis > 24){
 if (led > 0){
+if (led == 5){
+unsigned char o;
+o = mem_read(0x0003);
+mem_write(0xFF74 + 7*o,ds_get(0x01));
+mem_write(0xFF75 + 7*o,ds_get(0x02));
+mem_write(0xFF76 + 7*o,ds_get(0x04));
+mem_write(0xFF77 + 7*o,ds_get(0x05));
+mem_write(0xFF78 + 7*o,ds_get(0x06));
+mem_write(0xFF79 + 7*o,mem_read(0x000A));
+mem_write(0xFF7A + 7*o,mem_read(0x000B));
+o++;
+mem_write(0x0003,o);
+}
 PORTBbits.RB4 = 1;
 led--;
 }
