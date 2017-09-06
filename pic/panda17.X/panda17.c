@@ -86,7 +86,7 @@ void interrupt ints_isr(void){
                 dt = mem_read(0x0003);
                 for (n=0;n<dt;n++){
                     for ( unsigned char u;u<7;u++){
-                        printf("%x",mem_read(0xFF74 + u + 7*n));
+                        printf("%x",mem_read(0xFF74 + u + 7*n));    //prints all
                     }
                 }
                 printf("X");    //this determines the end of the transmision
