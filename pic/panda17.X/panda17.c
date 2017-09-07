@@ -66,7 +66,7 @@ void interrupt ints_isr(void){
             case 'a':   //Send data saved
                 PORTBbits.RB4 = 1;
                 unsigned int add,n,aux;
-                unsigned char dt = 0;
+                unsigned char dt = 0,aux2;
                 add = mem_read(0x0A);
                 add = add << 8;
                 add += mem_read(0x0B);  //gets the amount of saved data
@@ -82,12 +82,15 @@ void interrupt ints_isr(void){
                     aux += mem_read(2*n+0x7FF8);
                     printf("%04x\r\n",aux);
                 }
-                printf("Z%x",mem_read(0x0003)); //prints the amount of events in hex format (always 2 bytes)
                 dt = mem_read(0x0003);
+                printf("Z%x\n",dt); //prints the amount of events in hex format (always 2 bytes)
                 for (n=0;n<dt;n++){
-                    for ( unsigned char u;u<7;u++){
-                        printf("%x",mem_read(0xFF74 + u + 7*n));    //prints all
+                    for ( unsigned char u=0;u<7;u++){
+                        add = 0xFF74 + u + 7*n;
+                        aux2 = mem_read(add);
+                        printf("%x ",aux2);    //prints all
                     }
+                    printf("\n");
                 }
                 printf("X");    //this determines the end of the transmision
                 PORTBbits.RB4 = 0;
@@ -140,17 +143,24 @@ void interrupt ints_isr(void){
         if (PORTBbits.RB2){
             milis++;
             if(milis > 24){        //24 gives 1 sec @40ms
-                if (led > 0){ //led 15 secs turned on at the begining of the acquisition
+                if (led > 0){ //led 5 secs turned on at the begining of the acquisition
                     if (led == 5){  //this is only executed when acq is started
-                        unsigned char o;    //supports upto 10 events start/stop
+                        unsigned char o,ax;    //supports upto 10 events start/stop
                         o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
-                        mem_write(0xFF74 + 7*o,ds_get(0x01)); //min
-                        mem_write(0xFF75 + 7*o,ds_get(0x02)); //hour
-                        mem_write(0xFF76 + 7*o,ds_get(0x04)); //day
-                        mem_write(0xFF77 + 7*o,ds_get(0x05)); //month
-                        mem_write(0xFF78 + 7*o,ds_get(0x06)); //year
-                        mem_write(0xFF79 + 7*o,mem_read(0x000A));   //saves also the amount data
-                        mem_write(0xFF7A + 7*o,mem_read(0x000B));
+                        ax = ds_get(0x01);
+                        mem_write(0xFF74 + 7*o,ax); //min
+                        ax = ds_get(0x02);
+                        mem_write(0xFF75 + 7*o,ax); //hour
+                        ax = ds_get(0x04);
+                        mem_write(0xFF76 + 7*o,ax); //day
+                        ax = ds_get(0x05);
+                        mem_write(0xFF77 + 7*o,ax); //month
+                        ax = ds_get(0x06);
+                        mem_write(0xFF78 + 7*o,ax); //year
+                        ax = mem_read(0x000A);
+                        mem_write(0xFF79 + 7*o,ax);   //saves also the amount data
+                        ax = mem_read(0x000B);
+                        mem_write(0xFF7A + 7*o,ax);
                         o++;
                         mem_write(0x0003,o);
                     }
