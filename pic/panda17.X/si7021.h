@@ -28,5 +28,5 @@
 
 
 void si_reset();
-int si_read_h ();
-int si_read_t ();
+unsigned int si_read_h ();
+unsigned int si_read_t ();

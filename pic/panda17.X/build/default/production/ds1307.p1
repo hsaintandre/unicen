@@ -2,7 +2,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "31 i2clib.h
 [v _i2c_start `(v ~T0 @X0 0 ef ]
 "34
-[v _i2c_write `(uc ~T0 @X0 0 ef2`uc`uc ]
+[v _i2c_write `(v ~T0 @X0 0 ef2`uc`uc ]
 "33
 [v _i2c_stop `(v ~T0 @X0 0 ef ]
 "32
@@ -94,7 +94,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2clib.h: 31: void i2c_start();
 [; ;i2clib.h: 32: void i2c_rstart();
 [; ;i2clib.h: 33: void i2c_stop();
-[; ;i2clib.h: 34: unsigned char i2c_write(unsigned char datum, unsigned char ack);
+[; ;i2clib.h: 34: void i2c_write(unsigned char datum, unsigned char ack);
 [; ;i2clib.h: 35: unsigned char i2c_read(unsigned char ack);
 [; ;ds1307.h: 5: void ds_set(unsigned char *data );
 [; ;ds1307.h: 6: unsigned char ds_get(unsigned char data);

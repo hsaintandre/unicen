@@ -1510,7 +1510,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2clib.h: 31: void i2c_start();
 [; ;i2clib.h: 32: void i2c_rstart();
 [; ;i2clib.h: 33: void i2c_stop();
-[; ;i2clib.h: 34: unsigned char i2c_write(unsigned char datum, unsigned char ack);
+[; ;i2clib.h: 34: void i2c_write(unsigned char datum, unsigned char ack);
 [; ;i2clib.h: 35: unsigned char i2c_read(unsigned char ack);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -1631,9 +1631,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 144 ]
 }
 "39
-[v _i2c_write `(uc ~T0 @X0 1 ef2`uc`uc ]
+[v _i2c_write `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;i2clib.c: 39: unsigned char i2c_write(unsigned char datum, unsigned char ack){
+[; ;i2clib.c: 39: void i2c_write(unsigned char datum, unsigned char ack){
 [e :U _i2c_write ]
 [v _datum `uc ~T0 @X0 1 r1 ]
 [v _ack `uc ~T0 @X0 1 r2 ]
