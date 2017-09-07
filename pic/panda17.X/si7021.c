@@ -17,7 +17,7 @@ void si_reset(){
     i2c_stop();
 }
 
-int si_read_h (){
+unsigned int si_read_h (){
     unsigned int rta = 0;
     unsigned char rta_h,rta_l;
     i2c_start();
@@ -34,7 +34,7 @@ int si_read_h (){
     return rta;
 }
 
-int si_read_t (){
+unsigned int si_read_t (){
     unsigned int rta;
     unsigned char rta_h,rta_l;
     i2c_start();

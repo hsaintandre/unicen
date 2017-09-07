@@ -143,13 +143,13 @@ void i2c_init();
 void i2c_start();
 void i2c_rstart();
 void i2c_stop();
-unsigned char i2c_write(unsigned char datum, unsigned char ack);
+void i2c_write(unsigned char datum, unsigned char ack);
 unsigned char i2c_read(unsigned char ack);
 
 # 30 "si7021.h"
 void si_reset();
-int si_read_h ();
-int si_read_t ();
+unsigned int si_read_h ();
+unsigned int si_read_t ();
 
 # 13 "si7021.c"
 void si_reset(){
@@ -159,7 +159,7 @@ i2c_write(0xFE,1);
 i2c_stop();
 }
 
-int si_read_h (){
+unsigned int si_read_h (){
 unsigned int rta = 0;
 unsigned char rta_h,rta_l;
 i2c_start();
@@ -176,7 +176,7 @@ rta += rta_l;
 return rta;
 }
 
-int si_read_t (){
+unsigned int si_read_t (){
 unsigned int rta;
 unsigned char rta_h,rta_l;
 i2c_start();

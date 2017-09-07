@@ -2,7 +2,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "31 i2clib.h
 [v _i2c_start `(v ~T0 @X0 0 ef ]
 "34
-[v _i2c_write `(uc ~T0 @X0 0 ef2`uc`uc ]
+[v _i2c_write `(v ~T0 @X0 0 ef2`uc`uc ]
 "33
 [v _i2c_stop `(v ~T0 @X0 0 ef ]
 "32
@@ -94,11 +94,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2clib.h: 31: void i2c_start();
 [; ;i2clib.h: 32: void i2c_rstart();
 [; ;i2clib.h: 33: void i2c_stop();
-[; ;i2clib.h: 34: unsigned char i2c_write(unsigned char datum, unsigned char ack);
+[; ;i2clib.h: 34: void i2c_write(unsigned char datum, unsigned char ack);
 [; ;i2clib.h: 35: unsigned char i2c_read(unsigned char ack);
 [; ;si7021.h: 30: void si_reset();
-[; ;si7021.h: 31: int si_read_h ();
-[; ;si7021.h: 32: int si_read_t ();
+[; ;si7021.h: 31: unsigned int si_read_h ();
+[; ;si7021.h: 32: unsigned int si_read_t ();
 "13 si7021.c
 [v _si_reset `(v ~T0 @X0 1 ef ]
 {
@@ -122,9 +122,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 6 ]
 }
 "20
-[v _si_read_h `(i ~T0 @X0 1 ef ]
+[v _si_read_h `(ui ~T0 @X0 1 ef ]
 {
-[; ;si7021.c: 20: int si_read_h (){
+[; ;si7021.c: 20: unsigned int si_read_h (){
 [e :U _si_read_h ]
 [f ]
 "21
@@ -170,16 +170,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =+ _rta -> _rta_l `ui ]
 [; ;si7021.c: 34: return rta;
 "34
-[e ) -> _rta `i ]
+[e ) _rta ]
 [e $UE 7  ]
 [; ;si7021.c: 35: }
 "35
 [e :UE 7 ]
 }
 "37
-[v _si_read_t `(i ~T0 @X0 1 ef ]
+[v _si_read_t `(ui ~T0 @X0 1 ef ]
 {
-[; ;si7021.c: 37: int si_read_t (){
+[; ;si7021.c: 37: unsigned int si_read_t (){
 [e :U _si_read_t ]
 [f ]
 "38
@@ -224,7 +224,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =+ _rta -> _rta_l `ui ]
 [; ;si7021.c: 51: return rta;
 "51
-[e ) -> _rta `i ]
+[e ) _rta ]
 [e $UE 8  ]
 [; ;si7021.c: 52: }
 "52

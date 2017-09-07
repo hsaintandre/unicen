@@ -31,5 +31,5 @@ void i2c_init();
 void i2c_start();
 void i2c_rstart();
 void i2c_stop();
-unsigned char i2c_write(unsigned char datum, unsigned char ack);
+void i2c_write(unsigned char datum, unsigned char ack);
 unsigned char i2c_read(unsigned char ack);

@@ -36,7 +36,7 @@ void i2c_stop(){
     SSPCON2bits.PEN = 1;        //generates STOP condition
 }
 
-unsigned char i2c_write(unsigned char datum, unsigned char ack){
+void i2c_write(unsigned char datum, unsigned char ack){
     
     while(SSPSTATbits.R_nW | SSPCON2bits.PEN | SSPCON2bits.ACKEN | SSPCON2bits.RCEN | SSPCON2bits.RSEN | SSPCON2bits.SEN);
     SSPBUF = datum;        //loads one byte of data

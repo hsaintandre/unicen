@@ -2171,7 +2171,7 @@ void i2c_init();
 void i2c_start();
 void i2c_rstart();
 void i2c_stop();
-unsigned char i2c_write(unsigned char datum, unsigned char ack);
+void i2c_write(unsigned char datum, unsigned char ack);
 unsigned char i2c_read(unsigned char ack);
 
 # 30 "24lc512.h"
@@ -2180,17 +2180,18 @@ unsigned char mem_read(unsigned int add);
 
 # 30 "si7021.h"
 void si_reset();
-int si_read_h ();
-int si_read_t ();
+unsigned int si_read_h ();
+unsigned int si_read_t ();
 
 # 5 "ds1307.h"
 void ds_set(unsigned char *data );
 unsigned char ds_get(unsigned char data);
 
 # 17 "panda17.c"
-unsigned char milis = 0,led = 5;
+unsigned char milis = 0,led = 5, condition = 0;
 unsigned char time[7] = {0,0,0,0,0,0,0};
 unsigned int secs = 0;
+static bit fyh;
 
 void uart_init(){
 PIE1bits.RCIE = 1;
@@ -2225,6 +2226,28 @@ mem_write(0x000D,0x00);
 }
 }
 
+void save_event(){
+unsigned char o,ax;
+fyh = 0;
+o = mem_read(0x0003);
+ax = ds_get(0x01);
+mem_write(0xFF74 + 7*o,ax);
+ax = ds_get(0x02);
+mem_write(0xFF75 + 7*o,ax);
+ax = ds_get(0x04);
+mem_write(0xFF76 + 7*o,ax);
+ax = ds_get(0x05);
+mem_write(0xFF77 + 7*o,ax);
+ax = ds_get(0x06);
+mem_write(0xFF78 + 7*o,ax);
+ax = mem_read(0x000A);
+mem_write(0xFF79 + 7*o,ax);
+ax = mem_read(0x000B);
+mem_write(0xFF7A + 7*o,ax);
+o++;
+mem_write(0x0003,o);
+}
+
 void interrupt ints_isr(void){
 
 if (PIR1bits.RCIF){
@@ -2239,8 +2262,8 @@ rcv = RCREG;
 switch (rcv){
 case 'a':
 PORTBbits.RB4 = 1;
-unsigned int add,n,aux;
-unsigned char dt = 0;
+unsigned int dt = 0,add,n,aux;
+unsigned int aux2;
 add = mem_read(0x0A);
 add = add << 8;
 add += mem_read(0x0B);
@@ -2256,12 +2279,24 @@ aux = aux << 8;
 aux += mem_read(2*n+0x7FF8);
 printf("%04x\r\n",aux);
 }
-printf("Z%x",mem_read(0x0003));
 dt = mem_read(0x0003);
+printf("Z%x\n",dt);
 for (n=0;n<dt;n++){
-for ( unsigned char u;u<7;u++){
-printf("%x",mem_read(0xFF74 + u + 7*n));
-}
+aux2 = mem_read(7*n + 0xFF74);
+printf("%02x:",aux2);
+aux2 = mem_read(0x0FF75 + 7*n);
+printf("%02x ",aux2);
+aux2 = mem_read(0x0FF76 + 7*n);
+printf("%02x/",aux2);
+aux2 = mem_read(0x0FF77 + 7*n);
+printf("%02x/",aux2);
+aux2 = mem_read(0x0FF78 + 7*n);
+printf("%02x\t",aux2);
+aux2 = mem_read(0x0FF79 + 7*n);
+printf("%02x",aux2);
+aux2 = mem_read(0x0FF7A + 7*n);
+printf("%02x",aux2);
+printf("\n");
 }
 printf("X");
 PORTBbits.RB4 = 0;
@@ -2307,27 +2342,21 @@ if (PIR1bits.TMR2IF){
 PIR1bits.TMR2IF = 0;
 INTCONbits.GIE = 0;
 if (!PORTBbits.RB2){
+if (!fyh){
+save_event();
+fyh = 1;
+}
 led = 5;
 milis = 0;
 secs = 0;
 }
 if (PORTBbits.RB2){
+if (fyh){
+save_event();
+}
 milis++;
 if(milis > 24){
 if (led > 0){
-if (led == 5){
-unsigned char o;
-o = mem_read(0x0003);
-mem_write(0xFF74 + 7*o,ds_get(0x01));
-mem_write(0xFF75 + 7*o,ds_get(0x02));
-mem_write(0xFF76 + 7*o,ds_get(0x04));
-mem_write(0xFF77 + 7*o,ds_get(0x05));
-mem_write(0xFF78 + 7*o,ds_get(0x06));
-mem_write(0xFF79 + 7*o,mem_read(0x000A));
-mem_write(0xFF7A + 7*o,mem_read(0x000B));
-o++;
-mem_write(0x0003,o);
-}
 PORTBbits.RB4 = 1;
 led--;
 }
@@ -2336,7 +2365,12 @@ PORTBbits.RB4 = 0;
 }
 secs++;
 milis = 0;
-
+if (secs == 2){
+condition = 2;
+}
+}
+if (condition == 2){
+condition = 0;
 secs = 0;
 
 unsigned char arg;
@@ -2374,7 +2408,6 @@ mem_write(temp_add,arg);
 arg = temp_val & 0x00FF;
 mem_write(temp_add + 1,arg);
 
-
 }
 }
 INTCONbits.GIE = 1;
@@ -2410,7 +2443,7 @@ i2c_init();
 _delay((unsigned long)((10)*(2000000/4000.0)));
 mem_init();
 si_reset();
-
+fyh = 1;
 
 
 _delay((unsigned long)((200)*(2000000/4000.0)));
@@ -2418,3 +2451,4 @@ init_timer2(2,5,250);
 while(1){
 }
 }
+
