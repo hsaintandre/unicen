@@ -57,9 +57,9 @@ void save_event(){
     fyh = 0;
     o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
     ax = ds_get(0x01);
-    mem_write(0xFF74 + 7*o,ax); //min
-    ax = ds_get(0x02);
     mem_write(0xFF75 + 7*o,ax); //hour
+    ax = ds_get(0x02);
+    mem_write(0xFF74 + 7*o,ax); //min
     ax = ds_get(0x04);
     mem_write(0xFF76 + 7*o,ax); //day
     ax = ds_get(0x05);
@@ -106,7 +106,7 @@ void interrupt ints_isr(void){
                     printf("%04x\r\n",aux);
                 }
                 dt = mem_read(0x0003);
-                printf("Z%x\n",dt); //prints the amount of events in hex format (always 2 bytes)
+                printf("Z%02x\r\n",dt); //prints the amount of events in hex format (always 2 bytes)
                 for (n=0;n<dt;n++){
                     aux2 = mem_read(7*n + 0xFF74);
                     printf("%02x:",aux2);
@@ -122,7 +122,7 @@ void interrupt ints_isr(void){
                     printf("%02x",aux2);
                     aux2 = mem_read(0x0FF7A + 7*n);
                     printf("%02x",aux2);
-                    printf("\n");
+                    printf("\r\n");
                 }
                 printf("X");    //this determines the end of the transmision
                 PORTBbits.RB4 = 0;
@@ -259,8 +259,6 @@ int main(void) {
     
     TRISA = 0x00;
     TRISB = 0x00;    //all output
-//    ANSELbits.ANS2 = 0;     //disables analog input on RA2
-//    TRISAbits.TRISA2 = 1;
     ANSELHbits.ANS8 = 0;
     TRISBbits.TRISB2 = 1;   //input for initializations
     PORTBbits.RB4 = 0;
@@ -277,11 +275,3 @@ int main(void) {
     while(1){     
     }
 }
-
-
-
-//                    for ( unsigned char u=0;u<7;u++){
-//                        add = 0xFF74 + u + 7*n;
-//                        aux2 = mem_read(add);
-//                        printf("%x ",aux2);    //prints all
-//                    }

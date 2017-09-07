@@ -2231,9 +2231,9 @@ unsigned char o,ax;
 fyh = 0;
 o = mem_read(0x0003);
 ax = ds_get(0x01);
-mem_write(0xFF74 + 7*o,ax);
-ax = ds_get(0x02);
 mem_write(0xFF75 + 7*o,ax);
+ax = ds_get(0x02);
+mem_write(0xFF74 + 7*o,ax);
 ax = ds_get(0x04);
 mem_write(0xFF76 + 7*o,ax);
 ax = ds_get(0x05);
@@ -2280,7 +2280,7 @@ aux += mem_read(2*n+0x7FF8);
 printf("%04x\r\n",aux);
 }
 dt = mem_read(0x0003);
-printf("Z%x\n",dt);
+printf("Z%02x\r\n",dt);
 for (n=0;n<dt;n++){
 aux2 = mem_read(7*n + 0xFF74);
 printf("%02x:",aux2);
@@ -2296,7 +2296,7 @@ aux2 = mem_read(0x0FF79 + 7*n);
 printf("%02x",aux2);
 aux2 = mem_read(0x0FF7A + 7*n);
 printf("%02x",aux2);
-printf("\n");
+printf("\r\n");
 }
 printf("X");
 PORTBbits.RB4 = 0;

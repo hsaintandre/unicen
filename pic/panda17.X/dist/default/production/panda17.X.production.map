@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.43\dat\en_msgs.txt -cs \
   -h+dist/default/production\panda17.X.production.sym \
   --cmf=dist/default/production\panda17.X.production.cmf -z -Q16F886 \
-  -oC:\Users\Horacio\AppData\Local\Temp\saok.2 \
+  -oC:\Users\Horacio\AppData\Local\Temp\sas0.2 \
   -Mdist/default/production/panda17.X.production.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Horacio\AppData\Local\Temp\saok.obj \
+  -DENTRY=2 -k C:\Users\Horacio\AppData\Local\Temp\sas0.obj \
   dist/default/production\panda17.X.production.obj 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F886
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Horacio\AppData\Local\Temp\saok.obj
+C:\Users\Horacio\AppData\Local\Temp\sas0.obj
                 end_init                             12       12        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -55,9 +55,9 @@ dist/default/production\panda17.X.production.obj
                 text14                              D29      D29       59     1A52       0
                 text13                              CD9      CD9       50     19B2       0
                 text12                               29       29      4C8        8       0
-                text11                              7EC      7EC        F      F0E       0
+                text11                              7EF      7EF        F      F14       0
                 text10                              A08      A08       25     1410       0
-                text9                               787      787       65      F0E       0
+                text9                               78A      78A       65      F14       0
                 text8                               9C2      9C2       23     1384       0
                 text7                               9E5      9E5       23     13CA       0
                 text6                               AF6      AF6       33     15EC       0
@@ -73,8 +73,8 @@ dist/default/production\panda17.X.production.obj
                 dataBANK0                            60       60        1       20       1
                 bssBANK0                             54       54        B       20       1
                 bitbssBANK0                         2F8       5F        5       20       1     8
-                strings                             707      707       80      E0E       0
-                idataBANK0                          7FB      7FB        1      F0E       0
+                strings                             707      707       83      E0E       0
+                idataBANK0                          7FE      7FE        1      F14       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -104,9 +104,9 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text14                              D29      D29       59         0
                 text13                              CD9      CD9       50         0
                 text12                               29       29      4C8         0
-                text11                              7EC      7EC        F         0
+                text11                              7EF      7EF        F         0
                 text10                              A08      A08       25         0
-                text9                               787      787       65         0
+                text9                               78A      78A       65         0
                 text8                               9C2      9C2       23         0
                 text7                               9E5      9E5       23         0
                 text6                               AF6      AF6       33         0
@@ -116,12 +116,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text2                               91B      91B       1D         0
                 text1                               903      903       18         0
                 maintext                            C8B      C8B       4E         0
-                idataBANK0                          7FB      7FB        1         0
+                idataBANK0                          7FE      7FE        1         0
 
         CLASS   STRCODE        
 
         CLASS   STRING         
-                strings                             707      707       80         0
+                strings                             707      707       83         0
 
         CLASS   CONST          
 
@@ -172,8 +172,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK0                    000020  000041  000061        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 cstackBANK1                    0000A0  000014  0000B4        A0       1  BANK1       1
-                strings                        000707  000080  000787       E0E       0  STRING      2
-                text9                          000787  000075  0007FC       F0E       0  CODE        2
+                strings                        000707  000083  00078A       E0E       0  STRING      2
+                text9                          00078A  000075  0007FF       F14       0  CODE        2
                 text23                         0008ED  000008  0008F5      11DA       0  CODE        2
                 text24                         0008F5  00000E  000903      11EA       0  CODE        2
                 text1                          000903  000018  00091B      1206       0  CODE        2
@@ -213,14 +213,14 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         07FC-08EC              4
+                         07FF-08EC              1
                          1000-1FFF            800
         CONST            0003-0003              1           2
-                         07FC-08EC              4
+                         07FF-08EC              1
                          1000-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         07FC-08EC              4
+                         07FF-08EC              1
                          1000-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0061-006F              F           1
@@ -233,10 +233,10 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         07FC-08EC             F1
+                         07FF-08EC             EE
                          1000-1FFF           1000
         STRING           0003-0003              1           2
-                         07FC-08EC              4
+                         07FF-08EC              1
                          1000-1FFF            100
 
                                   Symbol Table
@@ -389,8 +389,8 @@ __end_of_dpowers          strings      0717
 __end_of_ds_get           text19       0A5E
 __end_of_ds_set           text28       0AF6
 __end_of_hexpowers        strings      071F
-__end_of_i2c_init         text11       07FB
-__end_of_i2c_read         text9        07EC
+__end_of_i2c_init         text11       07FE
+__end_of_i2c_read         text9        07EF
 __end_of_i2c_rstart       text21       09C2
 __end_of_i2c_start        text8        09E5
 __end_of_i2c_stop         text7        0A08
@@ -423,13 +423,13 @@ __pcstackBANK0            cstackBANK0  0020
 __pcstackBANK1            cstackBANK1  00A0
 __pcstackCOMMON           cstackCOMMON 0070
 __pdataBANK0              dataBANK0    0060
-__pidataBANK0             idataBANK0   07FB
+__pidataBANK0             idataBANK0   07FE
 __pintentry               intentry     0004
 __pmaintext               maintext     0C8B
 __pstrings                strings      0707
 __ptext1                  text1        0903
 __ptext10                 text10       0A08
-__ptext11                 text11       07EC
+__ptext11                 text11       07EF
 __ptext12                 text12       0029
 __ptext13                 text13       0CD9
 __ptext14                 text14       0D29
@@ -457,7 +457,7 @@ __ptext5                  text5        0BF3
 __ptext6                  text6        0AF6
 __ptext7                  text7        09E5
 __ptext8                  text8        09C2
-__ptext9                  text9        0787
+__ptext9                  text9        078A
 __size_of___lwdiv         (abs)        0000
 __size_of___lwmod         (abs)        0000
 __size_of___wmul          (abs)        0000
@@ -498,8 +498,8 @@ _ds_get                   text19       0A2D
 _ds_set                   text28       0AC3
 _fyh                      bitbssBANK0  02FC
 _hexpowers                strings      0717
-_i2c_init                 text11       07EC
-_i2c_read                 text9        0787
+_i2c_init                 text11       07EF
+_i2c_read                 text9        078A
 _i2c_rstart               text21       099F
 _i2c_start                text8        09C2
 _i2c_stop                 text7        09E5
@@ -1375,16 +1375,16 @@ Total ram usage:        8 bytes
  Parameters:    Size  Location     Type
   f               1    wreg     PTR const unsigned char 
 		 -> STR_18(2), STR_17(5), STR_16(7), STR_15(4), 
-		 -> STR_14(3), STR_13(2), STR_12(2), STR_11(5), 
+		 -> STR_14(3), STR_13(2), STR_12(3), STR_11(5), 
 		 -> STR_10(5), STR_9(6), STR_8(6), STR_7(6), 
-		 -> STR_6(6), STR_5(6), STR_4(5), STR_3(7), 
+		 -> STR_6(6), STR_5(6), STR_4(8), STR_3(7), 
 		 -> STR_2(6), STR_1(8), 
  Auto vars:     Size  Location     Type
   f               1   18[BANK0 ] PTR const unsigned char 
 		 -> STR_18(2), STR_17(5), STR_16(7), STR_15(4), 
-		 -> STR_14(3), STR_13(2), STR_12(2), STR_11(5), 
+		 -> STR_14(3), STR_13(2), STR_12(3), STR_11(5), 
 		 -> STR_10(5), STR_9(6), STR_8(6), STR_7(6), 
-		 -> STR_6(6), STR_5(6), STR_4(5), STR_3(7), 
+		 -> STR_6(6), STR_5(6), STR_4(8), STR_3(7), 
 		 -> STR_2(6), STR_1(8), 
   idx             1    9[BANK0 ] unsigned char 
   tmpval          4    0        struct .
@@ -1734,8 +1734,8 @@ i2clib.c
 		_i2c_write     		CODE           	0AF6	0000	52
 		_i2c_rstart    		CODE           	099F	0000	36
 		_i2c_stop      		CODE           	09E5	0000	36
-		_i2c_read      		CODE           	0787	0000	102
-		_i2c_init      		CODE           	07EC	0000	16
+		_i2c_read      		CODE           	078A	0000	102
+		_i2c_init      		CODE           	07EF	0000	16
 
 i2clib.c estimated size: 278
 
