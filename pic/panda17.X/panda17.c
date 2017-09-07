@@ -14,9 +14,10 @@
 #include "ds1307.h"
 
 //global vars
-unsigned char milis = 0,led = 5;
+unsigned char milis = 0,led = 5, condition = 0;
 unsigned char time[7] = {0,0,0,0,0,0,0};
 unsigned int secs = 0;
+static bit fyh;
 
 void uart_init(){       //Mandar esto a otra librería
     PIE1bits.RCIE = 1;  //enables EUSART reception interrupt
@@ -51,6 +52,28 @@ void mem_init(){
     }
 }
 
+void save_event(){
+    unsigned char o,ax;    //supports upto 10 events start/stop
+    fyh = 0;
+    o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
+    ax = ds_get(0x01);
+    mem_write(0xFF74 + 7*o,ax); //min
+    ax = ds_get(0x02);
+    mem_write(0xFF75 + 7*o,ax); //hour
+    ax = ds_get(0x04);
+    mem_write(0xFF76 + 7*o,ax); //day
+    ax = ds_get(0x05);
+    mem_write(0xFF77 + 7*o,ax); //month
+    ax = ds_get(0x06);
+    mem_write(0xFF78 + 7*o,ax); //year
+    ax = mem_read(0x000A);
+    mem_write(0xFF79 + 7*o,ax);   //saves also the amount data
+    ax = mem_read(0x000B);
+    mem_write(0xFF7A + 7*o,ax);
+    o++;
+    mem_write(0x0003,o);
+}
+
 void interrupt ints_isr(void){
 /***************************** uart_isr ***************************************/
     if (PIR1bits.RCIF){
@@ -65,8 +88,8 @@ void interrupt ints_isr(void){
         switch (rcv){
             case 'a':   //Send data saved
                 PORTBbits.RB4 = 1;
-                unsigned int add,n,aux;
-                unsigned char dt = 0,aux2;
+                unsigned int dt = 0,add,n,aux;
+                unsigned int aux2;
                 add = mem_read(0x0A);
                 add = add << 8;
                 add += mem_read(0x0B);  //gets the amount of saved data
@@ -85,11 +108,20 @@ void interrupt ints_isr(void){
                 dt = mem_read(0x0003);
                 printf("Z%x\n",dt); //prints the amount of events in hex format (always 2 bytes)
                 for (n=0;n<dt;n++){
-                    for ( unsigned char u=0;u<7;u++){
-                        add = 0xFF74 + u + 7*n;
-                        aux2 = mem_read(add);
-                        printf("%x ",aux2);    //prints all
-                    }
+                    aux2 = mem_read(7*n + 0xFF74);
+                    printf("%02x:",aux2);
+                    aux2 = mem_read(0x0FF75 + 7*n);
+                    printf("%02x ",aux2);
+                    aux2 = mem_read(0x0FF76 + 7*n);
+                    printf("%02x/",aux2);
+                    aux2 = mem_read(0x0FF77 + 7*n);
+                    printf("%02x/",aux2);
+                    aux2 = mem_read(0x0FF78 + 7*n);
+                    printf("%02x\t",aux2);
+                    aux2 = mem_read(0x0FF79 + 7*n);
+                    printf("%02x",aux2);
+                    aux2 = mem_read(0x0FF7A + 7*n);
+                    printf("%02x",aux2);
                     printf("\n");
                 }
                 printf("X");    //this determines the end of the transmision
@@ -136,34 +168,21 @@ void interrupt ints_isr(void){
         PIR1bits.TMR2IF = 0;
         INTCONbits.GIE = 0;
         if (!PORTBbits.RB2){
+            if (!fyh){  //this is only executed when acq is stopped
+                save_event();
+                fyh = 1;
+            }
             led = 5;
             milis = 0;
-            secs = 0;
+            secs = 0;          
         }
         if (PORTBbits.RB2){
+            if (fyh){
+                save_event();
+            }
             milis++;
             if(milis > 24){        //24 gives 1 sec @40ms
                 if (led > 0){ //led 5 secs turned on at the begining of the acquisition
-                    if (led == 5){  //this is only executed when acq is started
-                        unsigned char o,ax;    //supports upto 10 events start/stop
-                        o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
-                        ax = ds_get(0x01);
-                        mem_write(0xFF74 + 7*o,ax); //min
-                        ax = ds_get(0x02);
-                        mem_write(0xFF75 + 7*o,ax); //hour
-                        ax = ds_get(0x04);
-                        mem_write(0xFF76 + 7*o,ax); //day
-                        ax = ds_get(0x05);
-                        mem_write(0xFF77 + 7*o,ax); //month
-                        ax = ds_get(0x06);
-                        mem_write(0xFF78 + 7*o,ax); //year
-                        ax = mem_read(0x000A);
-                        mem_write(0xFF79 + 7*o,ax);   //saves also the amount data
-                        ax = mem_read(0x000B);
-                        mem_write(0xFF7A + 7*o,ax);
-                        o++;
-                        mem_write(0x0003,o);
-                    }
                     PORTBbits.RB4 = 1;
                     led--;
                 }
@@ -172,45 +191,49 @@ void interrupt ints_isr(void){
                 }
                 secs++;
                 milis = 0;
-                //if (secs == 1800){    //initialize in 1800 to start saving a set of data
-                    secs = 0;
-    /********************************** data saving ***************************/
-                    unsigned char arg;
-                    unsigned int temp_add,hum_add,up;
-                    unsigned int hum_val,temp_val;
-                    //this part carries out the measures
-                    hum_val = si_read_h();      
-                    temp_val = si_read_t();
-                    //this part gets the address pointers (it's actually the amount of data saved, it's enough with only one)
-                    hum_add = mem_read(0x000A);   //0x0A:0x0B hum address pointer
-                    hum_add = hum_add << 8;
-                    hum_add += mem_read(0x000B);
-                    up = hum_add + 1;
-                    arg = up >> 8;
-                    mem_write(0x000A,arg);
-                    arg = up & 0x00FF;
-                    mem_write(0x000B,arg);
-                    hum_add = (hum_add * 2) + 1 + 0x000F; //0x10: first hum value
-                    temp_add = mem_read(0x000C);  //0x0C:0x0D temp address pointer
-                    temp_add = temp_add << 8;
-                    temp_add += mem_read(0x000D);
-                    up = temp_add + 1;
-                    arg = up >> 8;
-                    mem_write(0x000C,arg);
-                    arg = up & 0x00FF;
-                    mem_write(0x000D,arg);
-                    temp_add = (temp_add * 2) + 1 + 0x7FF6; //0x7FF7 first temp value
-                    //this part saves the values
-                    arg = hum_val >> 8;     
-                    mem_write(hum_add,arg);
-                    arg = hum_val & 0x00FF;
-                    mem_write(hum_add + 1,arg);
-                    arg = (temp_val >> 8) & 0x00FF;
-                    mem_write(temp_add,arg);
-                    arg = temp_val & 0x00FF;
-                    mem_write(temp_add + 1,arg);
-    /********************************** data saving ***************************/                
-                //}
+                if (secs == 2){    //initialize in 1800 to start saving a set of data
+                    condition = 2;  //this is to avoid if() large nesting
+                }
+            }
+            if (condition == 2){
+                condition = 0;
+                secs = 0;
+                /********************************** data saving ***************************/
+                unsigned char arg;
+                unsigned int temp_add,hum_add,up;
+                unsigned int hum_val,temp_val;
+                //this part carries out the measures
+                hum_val = si_read_h();      
+                temp_val = si_read_t();
+                //this part gets the address pointers (it's actually the amount of data saved, it's enough with only one)
+                hum_add = mem_read(0x000A);   //0x0A:0x0B hum address pointer
+                hum_add = hum_add << 8;
+                hum_add += mem_read(0x000B);
+                up = hum_add + 1;
+                arg = up >> 8;
+                mem_write(0x000A,arg);
+                arg = up & 0x00FF;
+                mem_write(0x000B,arg);
+                hum_add = (hum_add * 2) + 1 + 0x000F; //0x10: first hum value
+                temp_add = mem_read(0x000C);  //0x0C:0x0D temp address pointer
+                temp_add = temp_add << 8;
+                temp_add += mem_read(0x000D);
+                up = temp_add + 1;
+                arg = up >> 8;
+                mem_write(0x000C,arg);
+                arg = up & 0x00FF;
+                mem_write(0x000D,arg);
+                temp_add = (temp_add * 2) + 1 + 0x7FF6; //0x7FF7 first temp value
+                //this part saves the values
+                arg = hum_val >> 8;     
+                mem_write(hum_add,arg);
+                arg = hum_val & 0x00FF;
+                mem_write(hum_add + 1,arg);
+                arg = (temp_val >> 8) & 0x00FF;
+                mem_write(temp_add,arg);
+                arg = temp_val & 0x00FF;
+                mem_write(temp_add + 1,arg);
+                /********************************** data saving ***************************/ 
             }
         }   
         INTCONbits.GIE = 1;
@@ -246,7 +269,7 @@ int main(void) {
     __delay_ms(10);
     mem_init();
     si_reset();
-    
+    fyh = 1;
     //printf("\n");
             
     __delay_ms(200);
@@ -254,3 +277,11 @@ int main(void) {
     while(1){     
     }
 }
+
+
+
+//                    for ( unsigned char u=0;u<7;u++){
+//                        add = 0xFF74 + u + 7*n;
+//                        aux2 = mem_read(add);
+//                        printf("%x ",aux2);    //prints all
+//                    }
