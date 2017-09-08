@@ -2312,9 +2312,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;panda17.c: 193: milis = 0;
 "193
 [e = _milis -> -> 0 `i `uc ]
-[; ;panda17.c: 194: if (secs == 2){
+[; ;panda17.c: 194: if (secs == 30){
 "194
-[e $ ! == _secs -> -> 2 `i `ui 184  ]
+[e $ ! == _secs -> -> 30 `i `ui 184  ]
 {
 [; ;panda17.c: 195: condition = 2;
 "195
@@ -2506,52 +2506,52 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;panda17.c: 261: TRISB = 0x00;
 "261
 [e = _TRISB -> -> 0 `i `uc ]
-[; ;panda17.c: 264: ANSELHbits.ANS8 = 0;
-"264
+[; ;panda17.c: 262: ANSELHbits.ANS8 = 0;
+"262
 [e = . . _ANSELHbits 0 0 -> -> 0 `i `uc ]
-[; ;panda17.c: 265: TRISBbits.TRISB2 = 1;
-"265
+[; ;panda17.c: 263: TRISBbits.TRISB2 = 1;
+"263
 [e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-[; ;panda17.c: 266: PORTBbits.RB4 = 0;
-"266
+[; ;panda17.c: 264: PORTBbits.RB4 = 0;
+"264
 [e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
-[; ;panda17.c: 267: uart_init();
-"267
+[; ;panda17.c: 265: uart_init();
+"265
 [e ( _uart_init ..  ]
-[; ;panda17.c: 268: i2c_init();
-"268
+[; ;panda17.c: 266: i2c_init();
+"266
 [e ( _i2c_init ..  ]
-[; ;panda17.c: 269: _delay((unsigned long)((10)*(2000000/4000.0)));
-"269
+[; ;panda17.c: 267: _delay((unsigned long)((10)*(2000000/4000.0)));
+"267
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
-[; ;panda17.c: 270: mem_init();
-"270
+[; ;panda17.c: 268: mem_init();
+"268
 [e ( _mem_init ..  ]
-[; ;panda17.c: 271: si_reset();
-"271
+[; ;panda17.c: 269: si_reset();
+"269
 [e ( _si_reset ..  ]
-[; ;panda17.c: 272: fyh = 1;
-"272
+[; ;panda17.c: 270: fyh = 1;
+"270
 [e = _fyh -> -> 1 `i `b ]
-[; ;panda17.c: 275: _delay((unsigned long)((200)*(2000000/4000.0)));
-"275
+[; ;panda17.c: 273: _delay((unsigned long)((200)*(2000000/4000.0)));
+"273
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
-[; ;panda17.c: 276: init_timer2(2,5,250);
-"276
+[; ;panda17.c: 274: init_timer2(2,5,250);
+"274
 [e ( _init_timer2 (3 , , -> -> 2 `i `uc -> -> 5 `i `uc -> -> 250 `i `uc ]
-[; ;panda17.c: 277: while(1){
-"277
+[; ;panda17.c: 275: while(1){
+"275
 [e :U 189 ]
 {
-"278
+"276
 }
 [e :U 188 ]
-"277
+"275
 [e $U 189  ]
 [e :U 190 ]
-[; ;panda17.c: 278: }
-[; ;panda17.c: 279: }
-"279
+[; ;panda17.c: 276: }
+[; ;panda17.c: 277: }
+"277
 [e :UE 187 ]
 }
 [p f _printf 14712964 ]

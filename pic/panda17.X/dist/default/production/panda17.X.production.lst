@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.43 build -156212558 
-                                                                                               Thu Sep 07 16:30:46 2017
+                                                                                               Thu Sep 07 17:25:42 2017
 
 Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250354
      1                           	processor	16F886
@@ -1129,28 +1129,28 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1115                           ;panda17.c: 261: TRISB = 0x00;
   1116  0C92  0186               	clrf	6	;volatile
   1117                           
-  1118                           ;panda17.c: 264: ANSELHbits.ANS8 = 0;
+  1118                           ;panda17.c: 262: ANSELHbits.ANS8 = 0;
   1119  0C93  1683               	bsf	3,5	;RP0=1, select bank3
   1120  0C94  1703               	bsf	3,6	;RP1=1, select bank3
   1121  0C95  1009               	bcf	9,0	;volatile
   1122                           
-  1123                           ;panda17.c: 265: TRISBbits.TRISB2 = 1;
+  1123                           ;panda17.c: 263: TRISBbits.TRISB2 = 1;
   1124  0C96  1683               	bsf	3,5	;RP0=1, select bank1
   1125  0C97  1303               	bcf	3,6	;RP1=0, select bank1
   1126  0C98  1506               	bsf	6,2	;volatile
   1127                           
-  1128                           ;panda17.c: 266: PORTBbits.RB4 = 0;
+  1128                           ;panda17.c: 264: PORTBbits.RB4 = 0;
   1129  0C99  1283               	bcf	3,5	;RP0=0, select bank0
   1130  0C9A  1303               	bcf	3,6	;RP1=0, select bank0
   1131  0C9B  1206               	bcf	6,4	;volatile
   1132                           
-  1133                           ;panda17.c: 267: uart_init();
+  1133                           ;panda17.c: 265: uart_init();
   1134  0C9C  120A  158A  2103  120A  158A  	fcall	_uart_init
   1135                           
-  1136                           ;panda17.c: 268: i2c_init();
+  1136                           ;panda17.c: 266: i2c_init();
   1137  0CA1  120A  118A  27EF  120A  158A  	fcall	_i2c_init
   1138                           
-  1139                           ;panda17.c: 269: _delay((unsigned long)((10)*(2000000/4000.0)));
+  1139                           ;panda17.c: 267: _delay((unsigned long)((10)*(2000000/4000.0)));
   1140  0CA6  3007               	movlw	7
   1141  0CA7  1683               	bsf	3,5	;RP0=1, select bank1
   1142  0CA8  1303               	bcf	3,6	;RP1=0, select bank1
@@ -1164,18 +1164,18 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1150  0CAF  2CAC               	goto	u2317
   1151  0CB0  0000               	nop
   1152                           
-  1153                           ;panda17.c: 270: mem_init();
+  1153                           ;panda17.c: 268: mem_init();
   1154  0CB1  120A  158A  25DC  120A  158A  	fcall	_mem_init
   1155                           
-  1156                           ;panda17.c: 271: si_reset();
+  1156                           ;panda17.c: 269: si_reset();
   1157  0CB6  120A  158A  211B  120A  158A  	fcall	_si_reset
   1158                           
-  1159                           ;panda17.c: 272: fyh = 1;
+  1159                           ;panda17.c: 270: fyh = 1;
   1160  0CBB  1283               	bcf	3,5	;RP0=0, select bank0
   1161  0CBC  1303               	bcf	3,6	;RP1=0, select bank0
   1162  0CBD  165F               	bsf	_fyh/(0+8),_fyh& (0+7)
   1163                           
-  1164                           ;panda17.c: 275: _delay((unsigned long)((200)*(2000000/4000.0)));
+  1164                           ;panda17.c: 273: _delay((unsigned long)((200)*(2000000/4000.0)));
   1165  0CBE  3082               	movlw	130
   1166  0CBF  1683               	bsf	3,5	;RP0=1, select bank1
   1167  0CC0  1303               	bcf	3,6	;RP1=0, select bank1
@@ -1188,7 +1188,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1174  0CC6  0BB3               	decfsz	(??_main^(0+128)+1),f
   1175  0CC7  2CC4               	goto	u2327
   1176                           
-  1177                           ;panda17.c: 276: init_timer2(2,5,250);
+  1177                           ;panda17.c: 274: init_timer2(2,5,250);
   1178  0CC8  3005               	movlw	5
   1179  0CC9  1683               	bsf	3,5	;RP0=1, select bank1
   1180  0CCA  1303               	bcf	3,6	;RP1=0, select bank1
@@ -1202,7 +1202,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1188  0CD2  3002               	movlw	2
   1189  0CD3  120A  158A  2208  120A  158A  	fcall	_init_timer2
   1190  0CD8                     l137:	
-  1191                           ;panda17.c: 277: while(1){
+  1191                           ;panda17.c: 275: while(1){
   1192                           
   1193  0CD8  2CD8               	goto	l137
   1194  0CD9                     __end_of_main:	
@@ -3322,8 +3322,8 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   3304                           ;panda17.c: 193: milis = 0;
   3305  039A  01D7               	clrf	_milis
   3306                           
-  3307                           ;panda17.c: 194: if (secs == 2){
-  3308  039B  3002               	movlw	2
+  3307                           ;panda17.c: 194: if (secs == 30){
+  3308  039B  301E               	movlw	30
   3309  039C  0654               	xorwf	_secs,w
   3310  039D  0455               	iorwf	_secs+1,w
   3311  039E  1D03               	btfss	3,2
@@ -6976,7 +6976,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.43 build -156212558 
-Symbol Table                                                                                   Thu Sep 07 16:30:46 2017
+Symbol Table                                                                                   Thu Sep 07 17:25:42 2017
 
                        pc 0002               __CFG_CP$OFF 0000               _SSPSTATbits 0094  
                       fsr 0004       ___wmul@multiplicand 0072            si_read_h@rta_h 0020  

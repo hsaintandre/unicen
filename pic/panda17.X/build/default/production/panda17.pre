@@ -2365,7 +2365,7 @@ PORTBbits.RB4 = 0;
 }
 secs++;
 milis = 0;
-if (secs == 2){
+if (secs == 30){
 condition = 2;
 }
 }
@@ -2433,8 +2433,6 @@ INTCON = 0xC0;
 
 TRISA = 0x00;
 TRISB = 0x00;
-
-
 ANSELHbits.ANS8 = 0;
 TRISBbits.TRISB2 = 1;
 PORTBbits.RB4 = 0;
@@ -2451,4 +2449,3 @@ init_timer2(2,5,250);
 while(1){
 }
 }
-
