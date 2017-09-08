@@ -191,7 +191,7 @@ void interrupt ints_isr(void){
                 }
                 secs++;
                 milis = 0;
-                if (secs == 2){    //initialize in 1800 to start saving a set of data
+                if (secs == 30){    //initialize in 1800 to start saving a set of data
                     condition = 2;  //this is to avoid if() large nesting
                 }
             }
