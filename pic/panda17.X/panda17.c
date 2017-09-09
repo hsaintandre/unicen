@@ -44,7 +44,7 @@ void mem_init(){
     aux = mem_read(0x0002);
     if (aux != 0xAA){
         mem_write(0x0002,0xAA); //0xAA means memory initialized
-        mem_write(0x0003,0x00); //resets the time&date counter
+        mem_write(0x0003,0x00); //enables date saving
         mem_write(0x000A,0x00); //sets measures pointers to zero
         mem_write(0x000B,0x00);
         mem_write(0x000C,0x00);
@@ -52,26 +52,23 @@ void mem_init(){
     }
 }
 
-void save_event(){
-    unsigned char o,ax;    //supports upto 10 events start/stop
-    fyh = 0;
-    o = mem_read(0x0003);   //0xFF74 first time&date set, 0x0003 t&d counter
+void save_the_date(){
+    unsigned char ax;    //supports upto 10 events start/stop
     ax = ds_get(0x01);
-    mem_write(0xFF75 + 7*o,ax); //hour
+    mem_write(0xFFFA,ax); //hour
     ax = ds_get(0x02);
-    mem_write(0xFF74 + 7*o,ax); //min
+    mem_write(0xFFF9,ax); //min
     ax = ds_get(0x04);
-    mem_write(0xFF76 + 7*o,ax); //day
+    mem_write(0xFFFB,ax); //day
     ax = ds_get(0x05);
-    mem_write(0xFF77 + 7*o,ax); //month
+    mem_write(0xFFFC,ax); //month
     ax = ds_get(0x06);
-    mem_write(0xFF78 + 7*o,ax); //year
+    mem_write(0xFFFD,ax); //year
     ax = mem_read(0x000A);
-    mem_write(0xFF79 + 7*o,ax);   //saves also the amount data
+    mem_write(0xFFFE,ax);   //saves also the amount data
     ax = mem_read(0x000B);
-    mem_write(0xFF7A + 7*o,ax);
-    o++;
-    mem_write(0x0003,o);
+    mem_write(0xFFFF,ax);
+    mem_write(0x0003,0xAA); //date already saved
 }
 
 void interrupt ints_isr(void){
@@ -99,31 +96,28 @@ void interrupt ints_isr(void){
                     aux = mem_read(2*n+0x0010);
                     aux = aux << 8;
                     aux += mem_read(2*n+0x0011);        
-                    printf("%04x;",aux);
+                    printf("%04x",aux);
                     aux = mem_read(2*n+0x7FF7);
                     aux = aux << 8;
                     aux += mem_read(2*n+0x7FF8);
-                    printf("%04x\r\n",aux);
+                    printf("%04x",aux);
                 }
-                dt = mem_read(0x0003);
-                printf("Z%02x\r\n",dt); //prints the amount of events in hex format (always 2 bytes)
-                for (n=0;n<dt;n++){
-                    aux2 = mem_read(7*n + 0xFF74);
-                    printf("%02x:",aux2);
-                    aux2 = mem_read(0x0FF75 + 7*n);
-                    printf("%02x ",aux2);
-                    aux2 = mem_read(0x0FF76 + 7*n);
-                    printf("%02x/",aux2);
-                    aux2 = mem_read(0x0FF77 + 7*n);
-                    printf("%02x/",aux2);
-                    aux2 = mem_read(0x0FF78 + 7*n);
-                    printf("%02x\t",aux2);
-                    aux2 = mem_read(0x0FF79 + 7*n);
-                    printf("%02x",aux2);
-                    aux2 = mem_read(0x0FF7A + 7*n);
-                    printf("%02x",aux2);
-                    printf("\r\n");
-                }
+                printf("Z");
+                aux2 = mem_read(0xFFF9);
+                printf("%02x:",aux2);
+                aux2 = mem_read(0xFFFA);
+                printf("%02x ",aux2);
+                aux2 = mem_read(0xFFFB);
+                printf("%02x/",aux2);
+                aux2 = mem_read(0xFFFC);
+                printf("%02x/",aux2);
+                aux2 = mem_read(0xFFFD);
+                printf("%02x\t",aux2);
+                aux2 = mem_read(0xFFFE);
+                printf("%02x",aux2);
+                aux2 = mem_read(0xFFFF);
+                printf("%02x",aux2);
+                printf("\r\n");
                 printf("X");    //this determines the end of the transmision
                 PORTBbits.RB4 = 0;
                 break;
@@ -141,9 +135,9 @@ void interrupt ints_isr(void){
             case 'c':   //clears lower memory
                 PORTBbits.RB4 = 1;
                 mem_write(0x0002,0x00); //clears initialization
-                mem_init();
+                mem_init(); //this allow the system to continue run again without need of a reset
                 PORTBbits.RB4 = 0;
-                if ((mem_read(0x0002) == 0xAA) && (mem_read(0x000D) == 0x00)){
+                if ((mem_read(0x0002) == 0xAA) && (mem_read(0x000D) == 0x00)){  //double check
                     printf("OK");
                 }
                 break;
@@ -168,20 +162,16 @@ void interrupt ints_isr(void){
         PIR1bits.TMR2IF = 0;
         INTCONbits.GIE = 0;
         if (!PORTBbits.RB2){
-            if (!fyh){  //this is only executed when acq is stopped
-                save_event();
-                fyh = 1;
-            }
             led = 5;
             milis = 0;
             secs = 0;          
         }
         if (PORTBbits.RB2){
-            if (fyh){
-                save_event();
+            if (mem_read(0x0003) != 0xAA){
+                save_the_date();
             }
             milis++;
-            if(milis > 24){        //24 gives 1 sec @40ms
+            if(milis > 6){        //24 gives 1 sec @40ms
                 if (led > 0){ //led 5 secs turned on at the begining of the acquisition
                     PORTBbits.RB4 = 1;
                     led--;
@@ -191,7 +181,7 @@ void interrupt ints_isr(void){
                 }
                 secs++;
                 milis = 0;
-                if (secs == 30){    //initialize in 1800 to start saving a set of data
+                if (secs == 1){    //initialize in 1800 to start saving a set of data
                     condition = 2;  //this is to avoid if() large nesting
                 }
             }

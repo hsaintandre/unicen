@@ -11,52 +11,52 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Horacio\AppData\Local\Temp\s510.obj
+$C:\Users\Horacio\AppData\Local\Temp\s60s.obj
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 12 12 3 2
 config CONFIG 0 2007 2007 2 2
 $dist/default/production\panda17.X.production.obj
 cinit CODE 0 15 15 14 2
-text1 CODE 0 903 903 18 2
-text2 CODE 0 91B 91B 1D 2
-text3 CODE 0 DDC DDC 5C 2
-text4 CODE 0 C3D C3D 4E 2
-text5 CODE 0 BF3 BF3 4A 2
-text6 CODE 0 AF6 AF6 33 2
-text7 CODE 0 9E5 9E5 23 2
-text8 CODE 0 9C2 9C2 23 2
-text9 CODE 0 78A 78A 65 2
-text10 CODE 0 A08 A08 25 2
-text11 CODE 0 7EF 7EF F 2
-text12 CODE 0 29 29 4C8 2
-text13 CODE 0 CD9 CD9 50 2
-text14 CODE 0 D29 D29 59 2
-text15 CODE 0 E38 E38 5D 2
-text16 CODE 0 E95 E95 16B 2
-text17 CODE 0 BAB BAB 48 2
-text18 CODE 0 B65 B65 46 2
-text19 CODE 0 A2D A2D 31 2
-text20 CODE 0 D82 D82 5A 2
-text21 CODE 0 99F 99F 23 2
-text22 CODE 0 4F1 4F1 216 2
-text23 CODE 0 8ED 8ED 8 2
-text24 CODE 0 8F5 8F5 E 2
-text25 CODE 0 938 938 21 2
-text26 CODE 0 A5E A5E 32 2
-text27 CODE 0 B29 B29 3C 2
-text28 CODE 0 AC3 AC3 33 2
-text29 CODE 0 A90 A90 33 2
-text30 CODE 0 97C 97C 23 2
-text31 CODE 0 959 959 23 2
-maintext CODE 0 C8B C8B 4E 2
+text1 CODE 0 A6E A6E 18 2
+text2 CODE 0 A86 A86 1D 2
+text3 CODE 0 F47 F47 5C 2
+text4 CODE 0 DA8 DA8 4E 2
+text5 CODE 0 D5E D5E 4A 2
+text6 CODE 0 C61 C61 33 2
+text7 CODE 0 B50 B50 23 2
+text8 CODE 0 B2D B2D 23 2
+text9 CODE 0 78B 78B 65 2
+text10 CODE 0 B73 B73 25 2
+text11 CODE 0 7F0 7F0 F 2
+text12 CODE 0 29 29 41A 2
+text13 CODE 0 E44 E44 50 2
+text14 CODE 0 E94 E94 59 2
+text15 CODE 0 FA3 FA3 5D 2
+text16 CODE 0 659 659 BC 2
+text17 CODE 0 D16 D16 48 2
+text18 CODE 0 CD0 CD0 46 2
+text19 CODE 0 B98 B98 31 2
+text20 CODE 0 EED EED 5A 2
+text21 CODE 0 B0A B0A 23 2
+text22 CODE 0 443 443 216 2
+text23 CODE 0 A58 A58 8 2
+text24 CODE 0 A60 A60 E 2
+text25 CODE 0 AA3 AA3 21 2
+text26 CODE 0 BC9 BC9 32 2
+text27 CODE 0 C94 C94 3C 2
+text28 CODE 0 C2E C2E 33 2
+text29 CODE 0 BFB BFB 33 2
+text30 CODE 0 AE7 AE7 23 2
+text31 CODE 0 AC4 AC4 23 2
+maintext CODE 0 DF6 DF6 4E 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 34 1
 cstackBANK1 BANK1 1 A0 A0 14 1
 bitbssBANK0 BANK0 1 2F8 5F 5 1
 intentry CODE 0 4 4 E 2
 bssBANK0 BANK0 1 54 54 B 1
-idataBANK0 CODE 0 7FE 7FE 1 2
-strings STRING 0 707 707 83 2
+idataBANK0 CODE 0 7FF 7FF 1 2
+strings STRING 0 715 715 76 2
 dataBANK0 BANK0 1 60 60 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -73,15 +73,15 @@ BANK1 B4-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 7FF-8EC 2
+CONST 800-A57 2
 CONST 1000-1FFF 2
 ENTRY 3-3 2
-ENTRY 7FF-8EC 2
+ENTRY 800-A57 2
 ENTRY 1000-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 7FF-8EC 2
+CODE 800-A57 2
 CODE 1000-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -89,10 +89,10 @@ SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 7FF-8EC 2
+STRCODE 800-A57 2
 STRCODE 1000-1FFF 2
 STRING 3-3 2
-STRING 7FF-8EC 2
+STRING 800-A57 2
 STRING 1000-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -108,522 +108,513 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\panda17.X.production.obj
-15 cinit CODE >863:C:\Users\Horacio\AppData\Local\Temp\s510.
-15 cinit CODE >866:C:\Users\Horacio\AppData\Local\Temp\s510.
-15 cinit CODE >913:C:\Users\Horacio\AppData\Local\Temp\s510.
-18 cinit CODE >914:C:\Users\Horacio\AppData\Local\Temp\s510.
-19 cinit CODE >918:C:\Users\Horacio\AppData\Local\Temp\s510.
-1A cinit CODE >919:C:\Users\Horacio\AppData\Local\Temp\s510.
-1B cinit CODE >920:C:\Users\Horacio\AppData\Local\Temp\s510.
-1C cinit CODE >921:C:\Users\Horacio\AppData\Local\Temp\s510.
-1D cinit CODE >922:C:\Users\Horacio\AppData\Local\Temp\s510.
-1E cinit CODE >923:C:\Users\Horacio\AppData\Local\Temp\s510.
-1F cinit CODE >924:C:\Users\Horacio\AppData\Local\Temp\s510.
-20 cinit CODE >925:C:\Users\Horacio\AppData\Local\Temp\s510.
-21 cinit CODE >926:C:\Users\Horacio\AppData\Local\Temp\s510.
-22 cinit CODE >927:C:\Users\Horacio\AppData\Local\Temp\s510.
-23 cinit CODE >928:C:\Users\Horacio\AppData\Local\Temp\s510.
-24 cinit CODE >931:C:\Users\Horacio\AppData\Local\Temp\s510.
-25 cinit CODE >937:C:\Users\Horacio\AppData\Local\Temp\s510.
-25 cinit CODE >939:C:\Users\Horacio\AppData\Local\Temp\s510.
-26 cinit CODE >940:C:\Users\Horacio\AppData\Local\Temp\s510.
-4 intentry CODE >77:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-959 text31 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-959 text31 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-97A text31 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-97B text31 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-97C text30 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-97C text30 CODE >35:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-99D text30 CODE >36:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-99E text30 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-A90 text29 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-A91 text29 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-AB2 text29 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-AB6 text29 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-ABA text29 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-ABD text29 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-ABD text29 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-ABF text29 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-AC3 text28 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-AC4 text28 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-AC9 text28 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-ACE text28 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-AD6 text28 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-ADE text28 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-AEC text28 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-AF1 text28 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-B29 text27 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B29 text27 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B2B text27 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B2F text27 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B31 text27 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B33 text27 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B3A text27 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B3E text27 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B3F text27 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B46 text27 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B4E text27 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B54 text27 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B55 text27 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B5C text27 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-B60 text27 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
-A5E text26 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A5E text26 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A62 text26 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A64 text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A66 text26 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A6D text26 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A71 text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A72 text26 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A7A text26 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A80 text26 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A87 text26 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-A8B text26 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
-938 text25 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-938 text25 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-93A text25 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-93C text25 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-942 text25 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-949 text25 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-950 text25 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-954 text25 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
-8F5 text24 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
-8F6 text24 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
-8ED text23 CODE >36:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-8EE text23 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-8EE text23 CODE >38:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-8F2 text23 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-8F4 text23 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4F1 text22 CODE >464:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-4F4 text22 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-4F8 text22 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-50A text22 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-50E text22 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-514 text22 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-515 text22 CODE >546:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-519 text22 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-51A text22 CODE >551:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-51B text22 CODE >579:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-51B text22 CODE >580:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-51C text22 CODE >581:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-520 text22 CODE >551:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-52B text22 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-539 text22 CODE >598:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-53D text22 CODE >600:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-552 text22 CODE >601:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-569 text22 CODE >602:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-578 text22 CODE >712:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-578 text22 CODE >714:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-579 text22 CODE >718:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-579 text22 CODE >721:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-57A text22 CODE >723:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-57B text22 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-598 text22 CODE >822:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-598 text22 CODE >1251:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-59C text22 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5A8 text22 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5AA text22 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5AE text22 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5B3 text22 CODE >1266:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5B4 text22 CODE >1286:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5C0 text22 CODE >1294:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5C1 text22 CODE >1299:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5C1 text22 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5C7 text22 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5E0 text22 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5E5 text22 CODE >1314:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5E5 text22 CODE >1316:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5EB text22 CODE >1317:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-604 text22 CODE >1316:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-609 text22 CODE >1294:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-612 text22 CODE >1345:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-61A text22 CODE >1346:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-620 text22 CODE >1381:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-631 text22 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-63F text22 CODE >1384:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-643 text22 CODE >1387:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-645 text22 CODE >1392:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-649 text22 CODE >1393:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-64F text22 CODE >1415:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-655 text22 CODE >1417:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-65B text22 CODE >1418:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-664 text22 CODE >1428:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-668 text22 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-66E text22 CODE >1431:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-67A text22 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-67E text22 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-684 text22 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-68A text22 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-68B text22 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-6B9 text22 CODE >1500:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-6DA text22 CODE >1502:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-6ED text22 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-6F3 text22 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-6FC text22 CODE >1476:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-705 text22 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-706 text22 CODE >1541:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-99F text21 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-99F text21 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9C0 text21 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9C1 text21 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D82 text20 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D83 text20 CODE >54:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D88 text20 CODE >55:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D8B text20 CODE >56:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D8E text20 CODE >58:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D92 text20 CODE >59:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-D95 text20 CODE >61:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DB6 text20 CODE >62:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DB7 text20 CODE >63:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DB9 text20 CODE >64:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DBC text20 CODE >65:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DC5 text20 CODE >66:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DD0 text20 CODE >67:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DD6 text20 CODE >68:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-DDA text20 CODE >69:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-A2D text19 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A2E text19 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A33 text19 CODE >28:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A3B text19 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A43 text19 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A48 text19 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A50 text19 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A59 text19 CODE >33:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-A5C text19 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
-B65 text18 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B65 text18 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B6B text18 CODE >38:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B6F text18 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B74 text18 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B7B text18 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B84 text18 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B8D text18 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B92 text18 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-B99 text18 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BA4 text18 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BA7 text18 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BAB text17 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BAB text17 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BB1 text17 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BB5 text17 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BBA text17 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BC1 text17 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BCA text17 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BD3 text17 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BDA text17 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BDF text17 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BE4 text17 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BEB text17 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BEF text17 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BF2 text17 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-E95 text16 CODE >55:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E95 text16 CODE >57:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E98 text16 CODE >58:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-EA6 text16 CODE >59:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-EB1 text16 CODE >60:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-ED4 text16 CODE >61:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-EDF text16 CODE >62:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F02 text16 CODE >63:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F0D text16 CODE >64:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F30 text16 CODE >65:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F3B text16 CODE >66:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F5E text16 CODE >67:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F69 text16 CODE >68:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F8C text16 CODE >69:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F9A text16 CODE >70:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-FBD text16 CODE >71:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-FCB text16 CODE >72:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-FEE text16 CODE >73:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-FF4 text16 CODE >74:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-FFF text16 CODE >75:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E38 text15 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E38 text15 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E3C text15 CODE >23:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E41 text15 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E49 text15 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E51 text15 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E56 text15 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E5E text15 CODE >28:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E69 text15 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E74 text15 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E77 text15 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E80 text15 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E87 text15 CODE >33:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-E90 text15 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D29 text14 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D29 text14 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D2E text14 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D36 text14 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D3E text14 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D43 text14 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D4B text14 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D56 text14 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D61 text14 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D64 text14 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D6D text14 CODE >49:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D74 text14 CODE >50:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-D7D text14 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-CD9 text13 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CD9 text13 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CE7 text13 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CEB text13 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CF8 text13 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-D02 text13 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-D0C text13 CODE >49:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-D16 text13 CODE >50:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-D20 text13 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-29 text12 CODE >77:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-29 text12 CODE >79:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2B text12 CODE >80:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2C text12 CODE >82:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2D text12 CODE >83:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-30 text12 CODE >84:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-35 text12 CODE >85:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3A text12 CODE >86:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3E text12 CODE >88:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3F text12 CODE >89:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3F text12 CODE >90:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-40 text12 CODE >91:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-42 text12 CODE >93:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-53 text12 CODE >94:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-5A text12 CODE >95:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-6D text12 CODE >97:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-77 text12 CODE >98:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-83 text12 CODE >99:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-9F text12 CODE >100:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A6 text12 CODE >101:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C4 text12 CODE >102:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CE text12 CODE >103:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-EC text12 CODE >104:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-F3 text12 CODE >105:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-111 text12 CODE >106:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-11B text12 CODE >98:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-124 text12 CODE >108:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-135 text12 CODE >109:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-13F text12 CODE >110:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-14B text12 CODE >111:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-16D text12 CODE >112:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-177 text12 CODE >113:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-19B text12 CODE >114:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-1A5 text12 CODE >115:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-1C9 text12 CODE >116:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-1D3 text12 CODE >117:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-1F7 text12 CODE >118:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-201 text12 CODE >119:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-225 text12 CODE >120:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-22F text12 CODE >121:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-253 text12 CODE >122:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-25D text12 CODE >123:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-281 text12 CODE >124:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-28B text12 CODE >125:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-291 text12 CODE >110:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-29A text12 CODE >127:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2A0 text12 CODE >128:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2A3 text12 CODE >129:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2A4 text12 CODE >131:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2A9 text12 CODE >132:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2AB text12 CODE >133:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2AE text12 CODE >134:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2B3 text12 CODE >135:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2B8 text12 CODE >136:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2C0 text12 CODE >131:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2C8 text12 CODE >139:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2CE text12 CODE >140:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2CF text12 CODE >141:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2CF text12 CODE >142:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2D0 text12 CODE >143:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2DA text12 CODE >144:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2DF text12 CODE >145:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2E2 text12 CODE >146:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-2FA text12 CODE >147:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-300 text12 CODE >149:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-301 text12 CODE >151:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-308 text12 CODE >152:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-31C text12 CODE >151:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-323 text12 CODE >156:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-334 text12 CODE >157:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-345 text12 CODE >158:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-34B text12 CODE >161:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-34C text12 CODE >88:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-35F text12 CODE >161:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-35F text12 CODE >162:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-360 text12 CODE >163:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-360 text12 CODE >167:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-364 text12 CODE >168:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-365 text12 CODE >169:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-366 text12 CODE >170:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-368 text12 CODE >171:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-36A text12 CODE >172:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-36F text12 CODE >173:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-372 text12 CODE >175:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-376 text12 CODE >176:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-377 text12 CODE >177:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-379 text12 CODE >179:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-37B text12 CODE >180:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-37D text12 CODE >181:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-382 text12 CODE >183:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-388 text12 CODE >184:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-38C text12 CODE >185:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-38F text12 CODE >186:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-390 text12 CODE >187:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-392 text12 CODE >188:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-393 text12 CODE >189:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-393 text12 CODE >190:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-394 text12 CODE >192:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-39A text12 CODE >193:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-39B text12 CODE >194:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3A0 text12 CODE >195:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3A4 text12 CODE >198:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3A8 text12 CODE >199:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3A9 text12 CODE >200:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3AB text12 CODE >206:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3B6 text12 CODE >207:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3C1 text12 CODE >209:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3D2 text12 CODE >210:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3D9 text12 CODE >211:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3EC text12 CODE >212:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3F4 text12 CODE >213:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-3F8 text12 CODE >214:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-405 text12 CODE >215:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-40B text12 CODE >216:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-418 text12 CODE >217:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-429 text12 CODE >218:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-43A text12 CODE >219:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-441 text12 CODE >220:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-454 text12 CODE >221:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-45C text12 CODE >222:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-460 text12 CODE >223:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-46D text12 CODE >224:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-473 text12 CODE >225:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-480 text12 CODE >226:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-491 text12 CODE >228:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-495 text12 CODE >229:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4A2 text12 CODE >230:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4A8 text12 CODE >231:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4B9 text12 CODE >232:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4BF text12 CODE >233:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4CC text12 CODE >234:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4D2 text12 CODE >235:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4E3 text12 CODE >239:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-4E4 text12 CODE >242:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-7EF text11 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7EF text11 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7F5 text11 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7F6 text11 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7FA text11 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7FB text11 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7FC text11 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7FD text11 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-A08 text10 CODE >244:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A0B text10 CODE >245:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A0C text10 CODE >246:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A0E text10 CODE >247:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A1D text10 CODE >248:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A21 text10 CODE >249:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A25 text10 CODE >250:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A29 text10 CODE >251:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-A2C text10 CODE >252:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-78A text9 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-78D text9 CODE >54:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-797 text9 CODE >55:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-79C text9 CODE >56:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-79F text9 CODE >58:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7A5 text9 CODE >59:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7A8 text9 CODE >61:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7C9 text9 CODE >62:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7CA text9 CODE >63:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7CC text9 CODE >64:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7CF text9 CODE >65:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7D8 text9 CODE >66:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7E3 text9 CODE >67:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7EB text9 CODE >68:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-7ED text9 CODE >69:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9C2 text8 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9C2 text8 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9E3 text8 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9E4 text8 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9E5 text7 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-9E5 text7 CODE >35:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-A06 text7 CODE >36:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-A07 text7 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-AF6 text6 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-AF9 text6 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-B18 text6 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-B1C text6 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-B20 text6 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-B23 text6 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-B23 text6 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-B25 text6 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
-BF3 text5 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BF3 text5 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BF9 text5 CODE >38:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-BFD text5 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C02 text5 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C0B text5 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C14 text5 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C1D text5 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C22 text5 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C2B text5 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C36 text5 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C39 text5 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C3D text4 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C3D text4 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C43 text4 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C47 text4 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C4C text4 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C55 text4 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C5E text4 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C67 text4 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C70 text4 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C75 text4 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C7A text4 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C83 text4 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C87 text4 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-C8A text4 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
-DDC text3 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-DDC text3 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-DEC text3 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-DF0 text3 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-DFD text3 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E09 text3 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E15 text3 CODE >49:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E21 text3 CODE >50:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-E2D text3 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-91B text2 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-91B text2 CODE >14:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-920 text2 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-92A text2 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-934 text2 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-937 text2 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
-903 text1 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-903 text1 CODE >23:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-906 text1 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-907 text1 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-908 text1 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-90B text1 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-90E text1 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-910 text1 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-911 text1 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-914 text1 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-917 text1 CODE >33:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-91A text1 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C8B maintext CODE >256:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C8B maintext CODE >257:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C8F maintext CODE >258:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C91 maintext CODE >260:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C92 maintext CODE >261:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C93 maintext CODE >262:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C96 maintext CODE >263:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C99 maintext CODE >264:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-C9C maintext CODE >265:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CA1 maintext CODE >266:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CA6 maintext CODE >267:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CB1 maintext CODE >268:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CB6 maintext CODE >269:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CBB maintext CODE >270:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CBE maintext CODE >273:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CC8 maintext CODE >274:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
-CD8 maintext CODE >275:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+15 cinit CODE >846:C:\Users\Horacio\AppData\Local\Temp\s60s.
+15 cinit CODE >849:C:\Users\Horacio\AppData\Local\Temp\s60s.
+15 cinit CODE >896:C:\Users\Horacio\AppData\Local\Temp\s60s.
+18 cinit CODE >897:C:\Users\Horacio\AppData\Local\Temp\s60s.
+19 cinit CODE >901:C:\Users\Horacio\AppData\Local\Temp\s60s.
+1A cinit CODE >902:C:\Users\Horacio\AppData\Local\Temp\s60s.
+1B cinit CODE >903:C:\Users\Horacio\AppData\Local\Temp\s60s.
+1C cinit CODE >904:C:\Users\Horacio\AppData\Local\Temp\s60s.
+1D cinit CODE >905:C:\Users\Horacio\AppData\Local\Temp\s60s.
+1E cinit CODE >906:C:\Users\Horacio\AppData\Local\Temp\s60s.
+1F cinit CODE >907:C:\Users\Horacio\AppData\Local\Temp\s60s.
+20 cinit CODE >908:C:\Users\Horacio\AppData\Local\Temp\s60s.
+21 cinit CODE >909:C:\Users\Horacio\AppData\Local\Temp\s60s.
+22 cinit CODE >910:C:\Users\Horacio\AppData\Local\Temp\s60s.
+23 cinit CODE >911:C:\Users\Horacio\AppData\Local\Temp\s60s.
+24 cinit CODE >914:C:\Users\Horacio\AppData\Local\Temp\s60s.
+25 cinit CODE >920:C:\Users\Horacio\AppData\Local\Temp\s60s.
+25 cinit CODE >922:C:\Users\Horacio\AppData\Local\Temp\s60s.
+26 cinit CODE >923:C:\Users\Horacio\AppData\Local\Temp\s60s.
+4 intentry CODE >74:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+AC4 text31 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+AC4 text31 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+AE5 text31 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+AE6 text31 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+AE7 text30 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+AE7 text30 CODE >35:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B08 text30 CODE >36:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B09 text30 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+BFB text29 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+BFC text29 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C1D text29 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C21 text29 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C25 text29 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C28 text29 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C28 text29 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C2A text29 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C2E text28 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C2F text28 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C34 text28 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C39 text28 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C41 text28 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C49 text28 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C57 text28 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C5C text28 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+C94 text27 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+C94 text27 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+C96 text27 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+C9A text27 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+C9C text27 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+C9E text27 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CA5 text27 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CA9 text27 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CAA text27 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CB1 text27 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CB9 text27 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CBF text27 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CC0 text27 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CC7 text27 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+CCB text27 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+BC9 text26 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BC9 text26 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BCD text26 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BCF text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BD1 text26 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BD8 text26 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BDC text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BDD text26 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BE5 text26 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BEB text26 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BF2 text26 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+BF6 text26 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+AA3 text25 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+AA3 text25 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+AA5 text25 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+AA7 text25 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+AAD text25 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+AB4 text25 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+ABB text25 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+ABF text25 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+A60 text24 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
+A61 text24 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
+A58 text23 CODE >36:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A59 text23 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A59 text23 CODE >38:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A5D text23 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A5F text23 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+443 text22 CODE >464:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+446 text22 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+44A text22 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+45C text22 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+460 text22 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+466 text22 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+467 text22 CODE >546:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+46B text22 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+46C text22 CODE >551:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+46D text22 CODE >579:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+46D text22 CODE >580:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+46E text22 CODE >581:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+472 text22 CODE >551:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+47D text22 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+48B text22 CODE >598:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+48F text22 CODE >600:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4A4 text22 CODE >601:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4BB text22 CODE >602:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4CA text22 CODE >712:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4CA text22 CODE >714:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4CB text22 CODE >718:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4CB text22 CODE >721:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4CC text22 CODE >723:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4CD text22 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4EA text22 CODE >822:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4EA text22 CODE >1251:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4EE text22 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4FA text22 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+4FC text22 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+500 text22 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+505 text22 CODE >1266:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+506 text22 CODE >1286:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+512 text22 CODE >1294:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+513 text22 CODE >1299:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+513 text22 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+519 text22 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+532 text22 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+537 text22 CODE >1314:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+537 text22 CODE >1316:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+53D text22 CODE >1317:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+556 text22 CODE >1316:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+55B text22 CODE >1294:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+564 text22 CODE >1345:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+56C text22 CODE >1346:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+572 text22 CODE >1381:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+583 text22 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+591 text22 CODE >1384:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+595 text22 CODE >1387:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+597 text22 CODE >1392:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+59B text22 CODE >1393:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5A1 text22 CODE >1415:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5A7 text22 CODE >1417:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5AD text22 CODE >1418:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5B6 text22 CODE >1428:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5BA text22 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5C0 text22 CODE >1431:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5CC text22 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5D0 text22 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5D6 text22 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5DC text22 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+5DD text22 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+60B text22 CODE >1500:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+62C text22 CODE >1502:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+63F text22 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+645 text22 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+64E text22 CODE >1476:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+657 text22 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+658 text22 CODE >1541:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+B0A text21 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B0A text21 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B2B text21 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B2C text21 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+EED text20 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+EEE text20 CODE >54:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+EF3 text20 CODE >55:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+EF6 text20 CODE >56:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+EF9 text20 CODE >58:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+EFD text20 CODE >59:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F00 text20 CODE >61:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F21 text20 CODE >62:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F22 text20 CODE >63:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F24 text20 CODE >64:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F27 text20 CODE >65:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F30 text20 CODE >66:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F3B text20 CODE >67:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F41 text20 CODE >68:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+F45 text20 CODE >69:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B98 text19 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+B99 text19 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+B9E text19 CODE >28:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+BA6 text19 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+BAE text19 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+BB3 text19 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+BBB text19 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+BC4 text19 CODE >33:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+BC7 text19 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\ds1307.c
+CD0 text18 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CD0 text18 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CD6 text18 CODE >38:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CDA text18 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CDF text18 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CE6 text18 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CEF text18 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CF8 text18 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+CFD text18 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D04 text18 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D0F text18 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D12 text18 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D16 text17 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D16 text17 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D1C text17 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D20 text17 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D25 text17 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D2C text17 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D35 text17 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D3E text17 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D45 text17 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D4A text17 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D4F text17 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D56 text17 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D5A text17 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D5D text17 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+659 text16 CODE >55:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+659 text16 CODE >57:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+664 text16 CODE >58:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+671 text16 CODE >59:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+67C text16 CODE >60:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+689 text16 CODE >61:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+694 text16 CODE >62:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6A1 text16 CODE >63:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6AC text16 CODE >64:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6B9 text16 CODE >65:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6C4 text16 CODE >66:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6D1 text16 CODE >67:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6DF text16 CODE >68:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6EC text16 CODE >69:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6FA text16 CODE >70:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+707 text16 CODE >71:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+714 text16 CODE >72:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+FA3 text15 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FA3 text15 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FA7 text15 CODE >23:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FAC text15 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FB4 text15 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FBC text15 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FC1 text15 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FC9 text15 CODE >28:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FD4 text15 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FDF text15 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FE2 text15 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FEB text15 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FF2 text15 CODE >33:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+FFB text15 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+E94 text14 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+E94 text14 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+E99 text14 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EA1 text14 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EA9 text14 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EAE text14 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EB6 text14 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EC1 text14 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+ECC text14 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+ECF text14 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+ED8 text14 CODE >49:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EDF text14 CODE >50:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+EE8 text14 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+E44 text13 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E44 text13 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E52 text13 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E56 text13 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E63 text13 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E6D text13 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E77 text13 CODE >49:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E81 text13 CODE >50:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E8B text13 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+29 text12 CODE >74:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+29 text12 CODE >76:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B text12 CODE >77:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2C text12 CODE >79:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2D text12 CODE >80:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+30 text12 CODE >81:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+35 text12 CODE >82:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3A text12 CODE >83:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3E text12 CODE >85:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3F text12 CODE >86:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3F text12 CODE >87:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+40 text12 CODE >88:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+42 text12 CODE >90:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+53 text12 CODE >91:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+5A text12 CODE >92:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+6D text12 CODE >94:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+77 text12 CODE >95:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+83 text12 CODE >96:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+9F text12 CODE >97:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A6 text12 CODE >98:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+C4 text12 CODE >99:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+CE text12 CODE >100:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+EC text12 CODE >101:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F3 text12 CODE >102:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+111 text12 CODE >103:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+11B text12 CODE >95:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+124 text12 CODE >105:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+12A text12 CODE >106:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+13B text12 CODE >107:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+145 text12 CODE >108:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+156 text12 CODE >109:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+160 text12 CODE >110:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+171 text12 CODE >111:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+17B text12 CODE >112:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+18C text12 CODE >113:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+196 text12 CODE >114:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1A7 text12 CODE >115:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1B1 text12 CODE >116:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1C2 text12 CODE >117:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1CC text12 CODE >118:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1DD text12 CODE >119:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1E7 text12 CODE >120:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1ED text12 CODE >121:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1F3 text12 CODE >122:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1F6 text12 CODE >123:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1F7 text12 CODE >125:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1FC text12 CODE >126:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+1FE text12 CODE >127:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+201 text12 CODE >128:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+206 text12 CODE >129:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+20B text12 CODE >130:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+213 text12 CODE >125:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+21B text12 CODE >133:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+221 text12 CODE >134:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+222 text12 CODE >135:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+222 text12 CODE >136:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+223 text12 CODE >137:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+22D text12 CODE >138:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+232 text12 CODE >139:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+235 text12 CODE >140:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+24D text12 CODE >141:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+253 text12 CODE >143:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+254 text12 CODE >145:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+25B text12 CODE >146:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+26F text12 CODE >145:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+276 text12 CODE >150:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+287 text12 CODE >151:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+298 text12 CODE >152:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+29E text12 CODE >155:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+29F text12 CODE >85:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B2 text12 CODE >155:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B2 text12 CODE >156:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B3 text12 CODE >157:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B3 text12 CODE >161:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B7 text12 CODE >162:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B8 text12 CODE >163:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2B9 text12 CODE >164:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2BB text12 CODE >165:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2BF text12 CODE >166:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2C0 text12 CODE >167:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2C2 text12 CODE >169:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2C4 text12 CODE >170:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2D0 text12 CODE >171:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2D5 text12 CODE >173:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2DB text12 CODE >174:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2DF text12 CODE >175:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2E2 text12 CODE >176:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2E3 text12 CODE >177:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2E5 text12 CODE >178:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2E6 text12 CODE >179:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2E6 text12 CODE >180:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2E7 text12 CODE >182:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2ED text12 CODE >183:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2EE text12 CODE >184:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2F2 text12 CODE >185:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2F6 text12 CODE >188:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2FA text12 CODE >189:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2FB text12 CODE >190:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+2FD text12 CODE >196:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+308 text12 CODE >197:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+313 text12 CODE >199:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+324 text12 CODE >200:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+32B text12 CODE >201:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+33E text12 CODE >202:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+346 text12 CODE >203:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+34A text12 CODE >204:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+357 text12 CODE >205:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+35D text12 CODE >206:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+36A text12 CODE >207:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+37B text12 CODE >208:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+38C text12 CODE >209:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+393 text12 CODE >210:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3A6 text12 CODE >211:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3AE text12 CODE >212:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3B2 text12 CODE >213:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3BF text12 CODE >214:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3C5 text12 CODE >215:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3D2 text12 CODE >216:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3E3 text12 CODE >218:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3E7 text12 CODE >219:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3F4 text12 CODE >220:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+3FA text12 CODE >221:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+40B text12 CODE >222:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+411 text12 CODE >223:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+41E text12 CODE >224:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+424 text12 CODE >225:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+435 text12 CODE >229:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+436 text12 CODE >232:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+7F0 text11 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7F0 text11 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7F6 text11 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7F7 text11 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7FB text11 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7FC text11 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7FD text11 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7FE text11 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B73 text10 CODE >234:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B76 text10 CODE >235:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B77 text10 CODE >236:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B79 text10 CODE >237:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B88 text10 CODE >238:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B8C text10 CODE >239:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B90 text10 CODE >240:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B94 text10 CODE >241:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+B97 text10 CODE >242:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+78B text9 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+78E text9 CODE >54:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+798 text9 CODE >55:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+79D text9 CODE >56:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7A0 text9 CODE >58:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7A6 text9 CODE >59:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7A9 text9 CODE >61:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7CA text9 CODE >62:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7CB text9 CODE >63:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7CD text9 CODE >64:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7D0 text9 CODE >65:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7D9 text9 CODE >66:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7E4 text9 CODE >67:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7EC text9 CODE >68:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+7EE text9 CODE >69:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B2D text8 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B2D text8 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B4E text8 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B4F text8 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B50 text7 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B50 text7 CODE >35:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B71 text7 CODE >36:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+B72 text7 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C61 text6 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C64 text6 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C83 text6 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C87 text6 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C8B text6 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C8E text6 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C8E text6 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+C90 text6 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\i2clib.c
+D5E text5 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D5E text5 CODE >37:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D64 text5 CODE >38:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D68 text5 CODE >39:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D6D text5 CODE >40:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D76 text5 CODE >41:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D7F text5 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D88 text5 CODE >43:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D8D text5 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+D96 text5 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DA1 text5 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DA4 text5 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DA8 text4 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DA8 text4 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DAE text4 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DB2 text4 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DB7 text4 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DC0 text4 CODE >19:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DC9 text4 CODE >20:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DD2 text4 CODE >21:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DDB text4 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DE0 text4 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DE5 text4 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DEE text4 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DF2 text4 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+DF5 text4 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\24lc512.c
+F47 text3 CODE >42:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F47 text3 CODE >44:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F57 text3 CODE >45:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F5B text3 CODE >46:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F68 text3 CODE >47:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F74 text3 CODE >48:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F80 text3 CODE >49:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F8C text3 CODE >50:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+F98 text3 CODE >51:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A86 text2 CODE >13:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+A86 text2 CODE >14:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+A8B text2 CODE >15:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+A95 text2 CODE >16:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+A9F text2 CODE >17:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+AA2 text2 CODE >18:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\si7021.c
+A6E text1 CODE >22:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A6E text1 CODE >23:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A71 text1 CODE >24:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A72 text1 CODE >25:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A73 text1 CODE >26:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A76 text1 CODE >27:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A79 text1 CODE >29:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A7B text1 CODE >30:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A7C text1 CODE >31:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A7F text1 CODE >32:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A82 text1 CODE >33:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+A85 text1 CODE >34:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+DF6 maintext CODE >246:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+DF6 maintext CODE >247:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+DFA maintext CODE >248:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+DFC maintext CODE >250:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+DFD maintext CODE >251:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+DFE maintext CODE >252:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E01 maintext CODE >253:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E04 maintext CODE >254:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E07 maintext CODE >255:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E0C maintext CODE >256:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E11 maintext CODE >257:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E1C maintext CODE >258:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E21 maintext CODE >259:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E26 maintext CODE >260:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E29 maintext CODE >263:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E33 maintext CODE >264:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
+E43 maintext CODE >265:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\panda17.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -637,6 +628,7 @@ CD8 maintext CODE >275:C:\Users\Horacio\Documents\GitHub\unicen\pic\panda17.X\pa
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\panda17.X.production.obj
+__size_of_save_the_date 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 putch@data 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 ___lwmod@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
@@ -645,38 +637,39 @@ __Hspace_1 2FD 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
-ints_isr@aux2 4F 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@aux2 51 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 ints_isr@ferr 2FB -299 BANK0 1 bitbssBANK0 dist/default/production\panda17.X.production.obj
 ints_isr@oerr 2FA -299 BANK0 1 bitbssBANK0 dist/default/production\panda17.X.production.obj
 __size_of_mem_init 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of_mem_read 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-i1_i2c_start 12B2 0 CODE 0 text31 dist/default/production\panda17.X.production.obj
-_i2c_init FDE 0 CODE 0 text11 dist/default/production\panda17.X.production.obj
-i1_i2c_write 1520 0 CODE 0 text29 dist/default/production\panda17.X.production.obj
-_i2c_read F14 0 CODE 0 text9 dist/default/production\panda17.X.production.obj
-_i2c_stop 13CA 0 CODE 0 text7 dist/default/production\panda17.X.production.obj
+i1_i2c_start 1588 0 CODE 0 text31 dist/default/production\panda17.X.production.obj
+_i2c_init FE0 0 CODE 0 text11 dist/default/production\panda17.X.production.obj
+i1_i2c_write 17F6 0 CODE 0 text29 dist/default/production\panda17.X.production.obj
+_i2c_read F16 0 CODE 0 text9 dist/default/production\panda17.X.production.obj
+_i2c_stop 16A0 0 CODE 0 text7 dist/default/production\panda17.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 i1i2c_write@datum 79 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __size_ofi1_mem_init 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_ofi1_mem_read 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Horacio\AppData\Local\Temp\s510.obj
-_main 1916 0 CODE 0 maintext dist/default/production\panda17.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+_main 1BEC 0 CODE 0 maintext dist/default/production\panda17.X.production.obj
 _secs 54 0 BANK0 1 bssBANK0 dist/default/production\panda17.X.production.obj
 _time 58 0 BANK0 1 bssBANK0 dist/default/production\panda17.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\panda17.X.production.obj
 mem_write@add_h AE 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 mem_write@add_l AF 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
-start 24 0 CODE 0 init C:\Users\Horacio\AppData\Local\Temp\s510.obj
-__end_of_i2c_init FFC 0 CODE 0 text11 dist/default/production\panda17.X.production.obj
-__end_of_i2c_read FDE 0 CODE 0 text9 dist/default/production\panda17.X.production.obj
-__end_of_i2c_stop 1410 0 CODE 0 text7 dist/default/production\panda17.X.production.obj
+start 24 0 CODE 0 init C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+__end_of_i2c_init FFE 0 CODE 0 text11 dist/default/production\panda17.X.production.obj
+__end_of_i2c_read FE0 0 CODE 0 text9 dist/default/production\panda17.X.production.obj
+__end_of_i2c_stop 16E6 0 CODE 0 text7 dist/default/production\panda17.X.production.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of___lwmod 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 i2c_read@not_flag 2F8 -299 BANK0 1 bitbssBANK0 dist/default/production\panda17.X.production.obj
+__end_of_save_the_date E2A 0 CODE 0 text16 dist/default/production\panda17.X.production.obj
 ?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __size_of_init_timer2 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
@@ -686,86 +679,86 @@ __Hpowerup 0 0 CODE 0 powerup -
 i1i2c_write@ack 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 printf@c 33 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 printf@f 32 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-_printf$750 2A 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+_printf$749 2A 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 __size_of_ints_isr 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s510.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s510.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s510.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s510.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s510.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s510.obj
-__end_of_mem_write 1916 0 CODE 0 text4 dist/default/production\panda17.X.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+__end_of_mem_write 1BEC 0 CODE 0 text4 dist/default/production\panda17.X.production.obj
 __size_of_mem_write 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
-_mem_init 1BB8 0 CODE 0 text3 dist/default/production\panda17.X.production.obj
-_mem_read 17E6 0 CODE 0 text5 dist/default/production\panda17.X.production.obj
+_mem_init 1E8E 0 CODE 0 text3 dist/default/production\panda17.X.production.obj
+_mem_read 1ABC 0 CODE 0 text5 dist/default/production\panda17.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_mem_init 1C70 0 CODE 0 text3 dist/default/production\panda17.X.production.obj
-__end_of_mem_read 187A 0 CODE 0 text5 dist/default/production\panda17.X.production.obj
+__end_of_mem_init 1F46 0 CODE 0 text3 dist/default/production\panda17.X.production.obj
+__end_of_mem_read 1B50 0 CODE 0 text5 dist/default/production\panda17.X.production.obj
 ___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 printf@flag 31 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 printf@prec 2C 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-_mem_write 187A 0 CODE 0 text4 dist/default/production\panda17.X.production.obj
+_mem_write 1B50 0 CODE 0 text4 dist/default/production\panda17.X.production.obj
 printf@width 2F 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 _SSPCONbits 14 0 ABS 0 - dist/default/production\panda17.X.production.obj
 ints_isr@add 43 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-ints_isr@arg 51 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-ints_isr@aux 49 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-ints_isr@rcv 3C 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@arg 53 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@aux 4B 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@rcv 3E 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 _condition 56 0 BANK0 1 bssBANK0 dist/default/production\panda17.X.production.obj
-__end_of___wmul 12B2 0 CODE 0 text25 dist/default/production\panda17.X.production.obj
+__end_of___wmul 1588 0 CODE 0 text25 dist/default/production\panda17.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 _ints_isr 52 0 CODE 0 text12 dist/default/production\panda17.X.production.obj
-__end_of_i2c_start 13CA 0 CODE 0 text8 dist/default/production\panda17.X.production.obj
+__end_of_i2c_start 16A0 0 CODE 0 text8 dist/default/production\panda17.X.production.obj
 mem_read@add AA 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 mem_read@rta AD 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
-__end_of_i2c_write 1652 0 CODE 0 text6 dist/default/production\panda17.X.production.obj
+__end_of_i2c_write 1928 0 CODE 0 text6 dist/default/production\panda17.X.production.obj
 ?_printf 24 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 ds_set@j 7C 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __size_of_i2c_start 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 ___lwmod@divisor 78 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __size_of_i2c_write 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__end_of___lwdiv 16CA 0 CODE 0 text27 dist/default/production\panda17.X.production.obj
-__end_of___lwmod 1520 0 CODE 0 text26 dist/default/production\panda17.X.production.obj
+__end_of___lwdiv 19A0 0 CODE 0 text27 dist/default/production\panda17.X.production.obj
+__end_of___lwmod 17F6 0 CODE 0 text26 dist/default/production\panda17.X.production.obj
 __size_of_isdigit 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of_i2c_rstart 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _INTCON B 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__end_of_ints_isr 9E2 0 CODE 0 text12 dist/default/production\panda17.X.production.obj
-__end_of_ds_get 14BC 0 CODE 0 text19 dist/default/production\panda17.X.production.obj
-__end_of_ds_set 15EC 0 CODE 0 text28 dist/default/production\panda17.X.production.obj
-_dpowers E1A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+__end_of_ints_isr 886 0 CODE 0 text12 dist/default/production\panda17.X.production.obj
+__end_of_ds_get 1792 0 CODE 0 text19 dist/default/production\panda17.X.production.obj
+__end_of_ds_set 18C2 0 CODE 0 text28 dist/default/production\panda17.X.production.obj
+_dpowers E36 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 i1i2c_read@resp 78 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\panda17.X.production.obj
 ___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __size_of_putch 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-_i2c_start 1384 0 CODE 0 text8 dist/default/production\panda17.X.production.obj
-_i2c_write 15EC 0 CODE 0 text6 dist/default/production\panda17.X.production.obj
+_i2c_start 165A 0 CODE 0 text8 dist/default/production\panda17.X.production.obj
+_i2c_write 18C2 0 CODE 0 text6 dist/default/production\panda17.X.production.obj
 ___lwmod@dividend 7A 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 i1mem_write@add 7A 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 start_initialization 2A 0 CODE 0 cinit dist/default/production\panda17.X.production.obj
 si_read_t@rta_h 20 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 si_read_t@rta_l 21 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-__end_of_hexpowers E3E 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+__end_of_hexpowers E5A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 _OSCCON 8F 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__end_ofi1_mem_write 17E6 0 CODE 0 text17 dist/default/production\panda17.X.production.obj
+__end_ofi1_mem_write 1ABC 0 CODE 0 text17 dist/default/production\panda17.X.production.obj
 _TRISBbits 86 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _TRISCbits 87 0 ABS 0 - dist/default/production\panda17.X.production.obj
 i1mem_write@data 7C 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
-ints_isr@temp_add 4B 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-ints_isr@temp_val 3F 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@temp_add 4D 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@temp_val 41 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 _SPBRGH 9A 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 _SSPADD 93 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _SSPBUF 13 0 ABS 0 - dist/default/production\panda17.X.production.obj
-_hexpowers E2E 0 STRING 0 strings dist/default/production\panda17.X.production.obj
-__end_of_printf E0E 0 CODE 0 text22 dist/default/production\panda17.X.production.obj
-_isdigit$936 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
+_hexpowers E4A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+__end_of_printf CB2 0 CODE 0 text22 dist/default/production\panda17.X.production.obj
+_isdigit$935 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 mem_write@data AC 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
-ints_isr@hum_add 4D 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-ints_isr@hum_val 3D 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\Horacio\AppData\Local\Temp\s510.obj
+ints_isr@hum_add 4F 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@hum_val 3F 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Horacio\AppData\Local\Temp\s60s.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -773,26 +766,26 @@ __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 52 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
-__stringbase E18 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+__stringbase E34 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 ___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 0 config -
-_init_timer2 1410 0 CODE 0 text10 dist/default/production\panda17.X.production.obj
-__end_ofi1_i2c_start 12F8 0 CODE 0 text31 dist/default/production\panda17.X.production.obj
-__end_ofi1_i2c_write 1586 0 CODE 0 text29 dist/default/production\panda17.X.production.obj
+_init_timer2 16E6 0 CODE 0 text10 dist/default/production\panda17.X.production.obj
+__end_ofi1_i2c_start 15CE 0 CODE 0 text31 dist/default/production\panda17.X.production.obj
+__end_ofi1_i2c_write 185C 0 CODE 0 text29 dist/default/production\panda17.X.production.obj
 i1mem_read@add 7A 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 i1mem_read@rta 20 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__end_of_isdigit 1206 0 CODE 0 text24 dist/default/production\panda17.X.production.obj
+__end_of_isdigit 14DC 0 CODE 0 text24 dist/default/production\panda17.X.production.obj
 __Lcinit 2A 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
 ints_isr@k 46 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-ints_isr@n 52 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+ints_isr@n 49 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 ints_isr@z 45 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 _PORTBbits 6 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _INTCONbits B 0 ABS 0 - dist/default/production\panda17.X.production.obj
@@ -812,12 +805,12 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
-___wmul 1270 0 CODE 0 text25 dist/default/production\panda17.X.production.obj
+___wmul 1546 0 CODE 0 text25 dist/default/production\panda17.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-i1_i2c_read 1B04 0 CODE 0 text20 dist/default/production\panda17.X.production.obj
-i1_i2c_stop 12F8 0 CODE 0 text30 dist/default/production\panda17.X.production.obj
+i1_i2c_read 1DDA 0 CODE 0 text20 dist/default/production\panda17.X.production.obj
+i1_i2c_stop 15CE 0 CODE 0 text30 dist/default/production\panda17.X.production.obj
 _PR2 92 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __S0 2009 0 ABS 0 - -
 __S1 B4 0 ABS 0 - -
@@ -830,22 +823,21 @@ __CFG_BOR4V$BOR21V 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 i1mem_write@add_h 20 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 i1mem_write@add_l 21 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 saved_w 7E 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__end_of_si_read_h 1D2A 0 CODE 0 text15 dist/default/production\panda17.X.production.obj
-__end_of_si_read_t 1B04 0 CODE 0 text14 dist/default/production\panda17.X.production.obj
+__end_of_si_read_h 2000 0 CODE 0 text15 dist/default/production\panda17.X.production.obj
+__end_of_si_read_t 1DDA 0 CODE 0 text14 dist/default/production\panda17.X.production.obj
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-_ds_get 145A 0 CODE 0 text19 dist/default/production\panda17.X.production.obj
-_ds_set 1586 0 CODE 0 text28 dist/default/production\panda17.X.production.obj
+_ds_get 1730 0 CODE 0 text19 dist/default/production\panda17.X.production.obj
+_ds_set 185C 0 CODE 0 text28 dist/default/production\panda17.X.production.obj
 __size_of_si_read_h 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of_si_read_t 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-_save_event 1D2A 0 CODE 0 text16 dist/default/production\panda17.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab E0E 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+__stringtab E2A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 ds_get@data 7B 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 ds_get@resp 7C 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Horacio\AppData\Local\Temp\s510.obj
-save_event@ax 27 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-_si_read_h 1C70 0 CODE 0 text15 dist/default/production\panda17.X.production.obj
-_si_read_t 1A52 0 CODE 0 text14 dist/default/production\panda17.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+save_the_date@ax 24 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+_si_read_h 1F46 0 CODE 0 text15 dist/default/production\panda17.X.production.obj
+_si_read_t 1D28 0 CODE 0 text14 dist/default/production\panda17.X.production.obj
 __pdataBANK0 60 0 BANK0 1 dataBANK0 dist/default/production\panda17.X.production.obj
 __size_of___wmul 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
@@ -853,43 +845,43 @@ __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _RCSTAbits 18 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _PIE1bits 8C 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_ofi1_mem_write 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-i1_mem_init 19B2 0 CODE 0 text13 dist/default/production\panda17.X.production.obj
-i1_mem_read 16CA 0 CODE 0 text18 dist/default/production\panda17.X.production.obj
+i1_mem_init 1C88 0 CODE 0 text13 dist/default/production\panda17.X.production.obj
+i1_mem_read 19A0 0 CODE 0 text18 dist/default/production\panda17.X.production.obj
 __LbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
 i2c_write@datum A9 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
-__ptext10 1410 0 CODE 0 text10 dist/default/production\panda17.X.production.obj
-__ptext11 FDE 0 CODE 0 text11 dist/default/production\panda17.X.production.obj
+__ptext10 16E6 0 CODE 0 text10 dist/default/production\panda17.X.production.obj
+__ptext11 FE0 0 CODE 0 text11 dist/default/production\panda17.X.production.obj
 __ptext12 52 0 CODE 0 text12 dist/default/production\panda17.X.production.obj
-__ptext13 19B2 0 CODE 0 text13 dist/default/production\panda17.X.production.obj
-__ptext14 1A52 0 CODE 0 text14 dist/default/production\panda17.X.production.obj
-__ptext15 1C70 0 CODE 0 text15 dist/default/production\panda17.X.production.obj
-__ptext16 1D2A 0 CODE 0 text16 dist/default/production\panda17.X.production.obj
-__ptext17 1756 0 CODE 0 text17 dist/default/production\panda17.X.production.obj
-__ptext18 16CA 0 CODE 0 text18 dist/default/production\panda17.X.production.obj
-__ptext19 145A 0 CODE 0 text19 dist/default/production\panda17.X.production.obj
-__ptext20 1B04 0 CODE 0 text20 dist/default/production\panda17.X.production.obj
-__ptext21 133E 0 CODE 0 text21 dist/default/production\panda17.X.production.obj
-__ptext22 9E2 0 CODE 0 text22 dist/default/production\panda17.X.production.obj
-__ptext23 11DA 0 CODE 0 text23 dist/default/production\panda17.X.production.obj
-__ptext24 11EA 0 CODE 0 text24 dist/default/production\panda17.X.production.obj
-__ptext25 1270 0 CODE 0 text25 dist/default/production\panda17.X.production.obj
-__ptext26 14BC 0 CODE 0 text26 dist/default/production\panda17.X.production.obj
-__ptext27 1652 0 CODE 0 text27 dist/default/production\panda17.X.production.obj
-__ptext28 1586 0 CODE 0 text28 dist/default/production\panda17.X.production.obj
-__ptext29 1520 0 CODE 0 text29 dist/default/production\panda17.X.production.obj
-__ptext30 12F8 0 CODE 0 text30 dist/default/production\panda17.X.production.obj
-__ptext31 12B2 0 CODE 0 text31 dist/default/production\panda17.X.production.obj
-___lwdiv 1652 0 CODE 0 text27 dist/default/production\panda17.X.production.obj
-___lwmod 14BC 0 CODE 0 text26 dist/default/production\panda17.X.production.obj
-__end_ofi1_i2c_read 1BB8 0 CODE 0 text20 dist/default/production\panda17.X.production.obj
-__end_ofi1_i2c_stop 133E 0 CODE 0 text30 dist/default/production\panda17.X.production.obj
-__pmaintext 1916 0 CODE 0 maintext dist/default/production\panda17.X.production.obj
+__ptext13 1C88 0 CODE 0 text13 dist/default/production\panda17.X.production.obj
+__ptext14 1D28 0 CODE 0 text14 dist/default/production\panda17.X.production.obj
+__ptext15 1F46 0 CODE 0 text15 dist/default/production\panda17.X.production.obj
+__ptext16 CB2 0 CODE 0 text16 dist/default/production\panda17.X.production.obj
+__ptext17 1A2C 0 CODE 0 text17 dist/default/production\panda17.X.production.obj
+__ptext18 19A0 0 CODE 0 text18 dist/default/production\panda17.X.production.obj
+__ptext19 1730 0 CODE 0 text19 dist/default/production\panda17.X.production.obj
+__ptext20 1DDA 0 CODE 0 text20 dist/default/production\panda17.X.production.obj
+__ptext21 1614 0 CODE 0 text21 dist/default/production\panda17.X.production.obj
+__ptext22 886 0 CODE 0 text22 dist/default/production\panda17.X.production.obj
+__ptext23 14B0 0 CODE 0 text23 dist/default/production\panda17.X.production.obj
+__ptext24 14C0 0 CODE 0 text24 dist/default/production\panda17.X.production.obj
+__ptext25 1546 0 CODE 0 text25 dist/default/production\panda17.X.production.obj
+__ptext26 1792 0 CODE 0 text26 dist/default/production\panda17.X.production.obj
+__ptext27 1928 0 CODE 0 text27 dist/default/production\panda17.X.production.obj
+__ptext28 185C 0 CODE 0 text28 dist/default/production\panda17.X.production.obj
+__ptext29 17F6 0 CODE 0 text29 dist/default/production\panda17.X.production.obj
+__ptext30 15CE 0 CODE 0 text30 dist/default/production\panda17.X.production.obj
+__ptext31 1588 0 CODE 0 text31 dist/default/production\panda17.X.production.obj
+___lwdiv 1928 0 CODE 0 text27 dist/default/production\panda17.X.production.obj
+___lwmod 1792 0 CODE 0 text26 dist/default/production\panda17.X.production.obj
+__end_ofi1_i2c_read 1E8E 0 CODE 0 text20 dist/default/production\panda17.X.production.obj
+__end_ofi1_i2c_stop 1614 0 CODE 0 text30 dist/default/production\panda17.X.production.obj
+__pmaintext 1BEC 0 CODE 0 maintext dist/default/production\panda17.X.production.obj
 i2c_write@ack A0 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 __size_of_ds_get 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of_ds_set 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
-_printf 9E2 0 CODE 0 text22 dist/default/production\panda17.X.production.obj
+_printf 886 0 CODE 0 text22 dist/default/production\panda17.X.production.obj
 ds_set@data 7B 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
@@ -897,10 +889,9 @@ __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 ___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 __size_of_si_reset 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 ___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
-__end_of_save_event 2000 0 CODE 0 text16 dist/default/production\panda17.X.production.obj
-stackhi 0 0 ABS 0 - C:\Users\Horacio\AppData\Local\Temp\s510.obj
-stacklo 0 0 ABS 0 - C:\Users\Horacio\AppData\Local\Temp\s510.obj
-__end_of__stringtab E1A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+stacklo 0 0 ABS 0 - C:\Users\Horacio\AppData\Local\Temp\s60s.obj
+__end_of__stringtab E36 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -919,8 +910,8 @@ __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 printf@ap 2B 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 end_of_initialization 4A 0 CODE 0 cinit dist/default/production\panda17.X.production.obj
 __Hintentry 24 0 CODE 0 intentry -
-__end_ofi1_mem_init 1A52 0 CODE 0 text13 dist/default/production\panda17.X.production.obj
-__end_ofi1_mem_read 1756 0 CODE 0 text18 dist/default/production\panda17.X.production.obj
+__end_ofi1_mem_init 1D28 0 CODE 0 text13 dist/default/production\panda17.X.production.obj
+__end_ofi1_mem_read 1A2C 0 CODE 0 text18 dist/default/production\panda17.X.production.obj
 __size_of_printf 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 ___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
@@ -929,39 +920,39 @@ ___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.p
 i2c_read@ack A9 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__end_of_uart_init 1236 0 CODE 0 text1 dist/default/production\panda17.X.production.obj
-_si_reset 1236 0 CODE 0 text2 dist/default/production\panda17.X.production.obj
+__end_of_uart_init 150C 0 CODE 0 text1 dist/default/production\panda17.X.production.obj
+_si_reset 150C 0 CODE 0 text2 dist/default/production\panda17.X.production.obj
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__ptext1 1206 0 CODE 0 text1 dist/default/production\panda17.X.production.obj
-__ptext2 1236 0 CODE 0 text2 dist/default/production\panda17.X.production.obj
-__ptext3 1BB8 0 CODE 0 text3 dist/default/production\panda17.X.production.obj
-__ptext4 187A 0 CODE 0 text4 dist/default/production\panda17.X.production.obj
-__ptext5 17E6 0 CODE 0 text5 dist/default/production\panda17.X.production.obj
-__ptext6 15EC 0 CODE 0 text6 dist/default/production\panda17.X.production.obj
-__ptext7 13CA 0 CODE 0 text7 dist/default/production\panda17.X.production.obj
-__ptext8 1384 0 CODE 0 text8 dist/default/production\panda17.X.production.obj
-__ptext9 F14 0 CODE 0 text9 dist/default/production\panda17.X.production.obj
+__ptext1 14DC 0 CODE 0 text1 dist/default/production\panda17.X.production.obj
+__ptext2 150C 0 CODE 0 text2 dist/default/production\panda17.X.production.obj
+__ptext3 1E8E 0 CODE 0 text3 dist/default/production\panda17.X.production.obj
+__ptext4 1B50 0 CODE 0 text4 dist/default/production\panda17.X.production.obj
+__ptext5 1ABC 0 CODE 0 text5 dist/default/production\panda17.X.production.obj
+__ptext6 18C2 0 CODE 0 text6 dist/default/production\panda17.X.production.obj
+__ptext7 16A0 0 CODE 0 text7 dist/default/production\panda17.X.production.obj
+__ptext8 165A 0 CODE 0 text8 dist/default/production\panda17.X.production.obj
+__ptext9 F16 0 CODE 0 text9 dist/default/production\panda17.X.production.obj
 __size_of_uart_init 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 i2c_read@flag 2F9 -299 BANK0 1 bitbssBANK0 dist/default/production\panda17.X.production.obj
 i2c_read@resp A8 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_si_reset 1270 0 CODE 0 text2 dist/default/production\panda17.X.production.obj
-_isdigit 11EA 0 CODE 0 text24 dist/default/production\panda17.X.production.obj
+__end_of_si_reset 1546 0 CODE 0 text2 dist/default/production\panda17.X.production.obj
+_save_the_date CB2 0 CODE 0 text16 dist/default/production\panda17.X.production.obj
+_isdigit 14C0 0 CODE 0 text24 dist/default/production\panda17.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_i2c_rstart 133E 0 CODE 0 text21 dist/default/production\panda17.X.production.obj
-ints_isr@dt 41 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
+_i2c_rstart 1614 0 CODE 0 text21 dist/default/production\panda17.X.production.obj
+ints_isr@dt 3C 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 ints_isr@up 47 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-_uart_init 1206 0 CODE 0 text1 dist/default/production\panda17.X.production.obj
+_uart_init 14DC 0 CODE 0 text1 dist/default/production\panda17.X.production.obj
 mem_write@add AA 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
-__end_of_init_timer2 145A 0 CODE 0 text10 dist/default/production\panda17.X.production.obj
+__end_of_init_timer2 1730 0 CODE 0 text10 dist/default/production\panda17.X.production.obj
 i1mem_read@add_h 21 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 i1mem_read@add_l 22 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-save_event@o 26 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 __HbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
 __end_of__initialization 4A 0 CODE 0 cinit dist/default/production\panda17.X.production.obj
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 FFC 0 CODE 0 idataBANK0 dist/default/production\panda17.X.production.obj
+__pidataBANK0 FFE 0 CODE 0 idataBANK0 dist/default/production\panda17.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
 init_timer2@eoc A1 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
 init_timer2@pre A4 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
@@ -973,11 +964,11 @@ _TXSTAbits 98 0 ABS 0 - dist/default/production\panda17.X.production.obj
 si_read_h@rta 22 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 si_read_t@rta 22 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 __Hend_init 2A 0 CODE 0 end_init -
-__end_of_main 19B2 0 CODE 0 maintext dist/default/production\panda17.X.production.obj
+__end_of_main 1C88 0 CODE 0 maintext dist/default/production\panda17.X.production.obj
 isdigit@c 71 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 printf@idx 29 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 printf@val 2D 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
-__end_of_dpowers E2E 0 STRING 0 strings dist/default/production\panda17.X.production.obj
+__end_of_dpowers E4A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 i1mem_init@aux 24 0 BANK0 1 cstackBANK0 dist/default/production\panda17.X.production.obj
 __size_of_i2c_init 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_of_i2c_read 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
@@ -988,27 +979,26 @@ _T2CON 12 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _TRISA 85 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _TRISB 86 0 ABS 0 - dist/default/production\panda17.X.production.obj
 _TXREG 19 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__end_of_putch 11EA 0 CODE 0 text23 dist/default/production\panda17.X.production.obj
+__end_of_putch 14C0 0 CODE 0 text23 dist/default/production\panda17.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\panda17.X.production.obj
 _milis 57 0 BANK0 1 bssBANK0 dist/default/production\panda17.X.production.obj
-_putch 11DA 0 CODE 0 text23 dist/default/production\panda17.X.production.obj
+_putch 14B0 0 CODE 0 text23 dist/default/production\panda17.X.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_ofi1_i2c_read 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __size_ofi1_i2c_stop 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-i1_mem_write 1756 0 CODE 0 text17 dist/default/production\panda17.X.production.obj
+i1_mem_write 1A2C 0 CODE 0 text17 dist/default/production\panda17.X.production.obj
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\panda17.X.production.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
 i1i2c_read@ack 79 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
-__end_of_i2c_rstart 1384 0 CODE 0 text21 dist/default/production\panda17.X.production.obj
+__end_of_i2c_rstart 165A 0 CODE 0 text21 dist/default/production\panda17.X.production.obj
 __initialization 2A 0 CODE 0 cinit dist/default/production\panda17.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
 __pbssBANK0 54 0 BANK0 1 bssBANK0 dist/default/production\panda17.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
-__pstrings E0E 0 STRING 0 strings dist/default/production\panda17.X.production.obj
-__size_of_save_event 0 0 ABS 0 - dist/default/production\panda17.X.production.obj
+__pstrings E2A 0 STRING 0 strings dist/default/production\panda17.X.production.obj
 ___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\panda17.X.production.obj
 _ANSELHbits 189 0 ABS 0 - dist/default/production\panda17.X.production.obj
 init_timer2@post A0 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.production.obj
@@ -1037,39 +1027,38 @@ init_timer2@post A0 0 BANK1 1 cstackBANK1 dist/default/production\panda17.X.prod
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 903 1206 18 2
-text2 0 91B 1236 1D 2
-text3 0 DDC 1BB8 5C 2
-text4 0 C3D 187A 4E 2
-text5 0 BF3 17E6 4A 2
-text6 0 AF6 15EC 33 2
-text7 0 9E5 13CA 23 2
-text8 0 9C2 1384 23 2
-text9 0 78A F14 75 2
-text10 0 A08 1410 25 2
-text13 0 CD9 19B2 50 2
-text14 0 D29 1A52 59 2
-text15 0 E38 1C70 5D 2
-text16 0 E95 1D2A 16B 2
-text17 0 BAB 1756 48 2
-text18 0 B65 16CA 46 2
-text19 0 A2D 145A 31 2
-text20 0 D82 1B04 5A 2
-text21 0 99F 133E 23 2
-text23 0 8ED 11DA 8 2
-text24 0 8F5 11EA E 2
-text25 0 938 1270 21 2
-text26 0 A5E 14BC 32 2
-text27 0 B29 1652 3C 2
-text28 0 AC3 1586 33 2
-text29 0 A90 1520 33 2
-text30 0 97C 12F8 23 2
-text31 0 959 12B2 23 2
-maintext 0 C8B 1916 4E 2
+text1 0 A6E 14DC 18 2
+text2 0 A86 150C 1D 2
+text3 0 F47 1E8E 5C 2
+text4 0 DA8 1B50 4E 2
+text5 0 D5E 1ABC 4A 2
+text6 0 C61 18C2 33 2
+text7 0 B50 16A0 23 2
+text8 0 B2D 165A 23 2
+text9 0 78B F16 75 2
+text10 0 B73 16E6 25 2
+text13 0 E44 1C88 50 2
+text14 0 E94 1D28 59 2
+text15 0 FA3 1F46 5D 2
+text17 0 D16 1A2C 48 2
+text18 0 CD0 19A0 46 2
+text19 0 B98 1730 31 2
+text20 0 EED 1DDA 5A 2
+text21 0 B0A 1614 23 2
+text23 0 A58 14B0 8 2
+text24 0 A60 14C0 E 2
+text25 0 AA3 1546 21 2
+text26 0 BC9 1792 32 2
+text27 0 C94 1928 3C 2
+text28 0 C2E 185C 33 2
+text29 0 BFB 17F6 33 2
+text30 0 AE7 15CE 23 2
+text31 0 AC4 1588 23 2
+maintext 0 DF6 1BEC 4E 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 41 1
 cstackBANK1 1 A0 A0 14 1
-intentry 0 4 8 703 2
+intentry 0 4 8 711 2
 reset_vec 0 0 0 3 2
-strings 0 707 E0E 83 2
+strings 0 715 E2A 76 2
 config 0 2007 400E 2 2
