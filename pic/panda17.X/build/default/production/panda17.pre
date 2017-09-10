@@ -2191,10 +2191,10 @@ unsigned char ds_get(unsigned char data);
 unsigned char milis = 0,led = 5, condition = 0;
 unsigned char time[7] = {0,0,0,0,0,0,0};
 unsigned int secs = 0;
-static bit fyh;
+static bit fyh,measure;
 
 void uart_init(){
-PIE1bits.RCIE = 1;
+PIE1bits.RCIE = 0;
 PIE1bits.TXIE = 0;
 TXSTAbits.BRGH = 1;
 BAUDCTLbits.BRG16 = 0;
@@ -2238,10 +2238,10 @@ ax = ds_get(0x05);
 mem_write(0xFFFC,ax);
 ax = ds_get(0x06);
 mem_write(0xFFFD,ax);
-ax = mem_read(0x000A);
-mem_write(0xFFFE,ax);
-ax = mem_read(0x000B);
-mem_write(0xFFFF,ax);
+
+
+
+
 mem_write(0x0003,0xAA);
 }
 
@@ -2287,10 +2287,10 @@ aux2 = mem_read(0xFFFC);
 printf("%02x/",aux2);
 aux2 = mem_read(0xFFFD);
 printf("%02x\t",aux2);
-aux2 = mem_read(0xFFFE);
-printf("%02x",aux2);
-aux2 = mem_read(0xFFFF);
-printf("%02x",aux2);
+
+
+
+
 printf("\r\n");
 printf("X");
 PORTBbits.RB4 = 0;
@@ -2336,11 +2336,14 @@ if (PIR1bits.TMR2IF){
 PIR1bits.TMR2IF = 0;
 INTCONbits.GIE = 0;
 if (!PORTBbits.RB2){
+PIE1bits.RCIE = 1;
 led = 5;
 milis = 0;
 secs = 0;
 }
-if (PORTBbits.RB2){
+
+else {
+PIE1bits.RCIE = 0;
 if (mem_read(0x0003) != 0xAA){
 save_the_date();
 }
@@ -2355,17 +2358,25 @@ PORTBbits.RB4 = 0;
 }
 secs++;
 milis = 0;
-if (secs == 1){
-condition = 2;
-}
-}
-if (condition == 2){
-condition = 0;
-secs = 0;
 
+
+
+}
+
+if (secs > 0){
+
+secs = 0;
+measure = 1;
+}
+}
+
+
+
+if (measure){
 unsigned char arg;
 unsigned int temp_add,hum_add,up;
 unsigned int hum_val,temp_val;
+measure = 0;
 
 hum_val = si_read_h();
 temp_val = si_read_t();
@@ -2397,9 +2408,9 @@ arg = (temp_val >> 8) & 0x00FF;
 mem_write(temp_add,arg);
 arg = temp_val & 0x00FF;
 mem_write(temp_add + 1,arg);
+}
 
-}
-}
+
 INTCONbits.GIE = 1;
 }
 
@@ -2425,6 +2436,8 @@ TRISA = 0x00;
 TRISB = 0x00;
 ANSELHbits.ANS8 = 0;
 TRISBbits.TRISB2 = 1;
+PORTBbits.RB4 = 1;
+_delay((unsigned long)((1000)*(2000000/4000.0)));
 PORTBbits.RB4 = 0;
 uart_init();
 i2c_init();
@@ -2432,7 +2445,7 @@ _delay((unsigned long)((10)*(2000000/4000.0)));
 mem_init();
 si_reset();
 fyh = 1;
-
+measure = 0;
 
 _delay((unsigned long)((200)*(2000000/4000.0)));
 init_timer2(2,5,250);

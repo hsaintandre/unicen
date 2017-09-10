@@ -124,12 +124,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S57 . . ]
 "1414
 [v _TRISBbits `VS57 ~T0 @X0 0 e@134 ]
-"30 i2clib.h
-[v _i2c_init `(v ~T0 @X0 0 ef ]
 [v F1733 `(v ~T0 @X0 1 tf1`ul ]
 "152 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic.h
 [v __delay `JF1733 ~T0 @X0 0 e ]
 [p i __delay ]
+"30 i2clib.h
+[v _i2c_init `(v ~T0 @X0 0 ef ]
 "30 si7021.h
 [v _si_reset `(v ~T0 @X0 0 ef ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
@@ -1703,16 +1703,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;panda17.c: 19: unsigned int secs = 0;
 "20
 [v _fyh `b ~T0 @X0 1 s ]
-[; ;panda17.c: 20: static bit fyh;
+[v _measure `b ~T0 @X0 1 s ]
+[; ;panda17.c: 20: static bit fyh,measure;
 "22
 [v _uart_init `(v ~T0 @X0 1 ef ]
 {
 [; ;panda17.c: 22: void uart_init(){
 [e :U _uart_init ]
 [f ]
-[; ;panda17.c: 23: PIE1bits.RCIE = 1;
+[; ;panda17.c: 23: PIE1bits.RCIE = 0;
 "23
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
 [; ;panda17.c: 24: PIE1bits.TXIE = 0;
 "24
 [e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
@@ -1850,18 +1851,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;panda17.c: 66: mem_write(0xFFFD,ax);
 "66
 [e ( _mem_write (2 , -> 65533 `ui _ax ]
-[; ;panda17.c: 67: ax = mem_read(0x000A);
-"67
-[e = _ax ( _mem_read (1 -> -> 10 `i `ui ]
-[; ;panda17.c: 68: mem_write(0xFFFE,ax);
-"68
-[e ( _mem_write (2 , -> 65534 `ui _ax ]
-[; ;panda17.c: 69: ax = mem_read(0x000B);
-"69
-[e = _ax ( _mem_read (1 -> -> 11 `i `ui ]
-[; ;panda17.c: 70: mem_write(0xFFFF,ax);
-"70
-[e ( _mem_write (2 , -> 65535 `ui _ax ]
 [; ;panda17.c: 71: mem_write(0x0003,0xAA);
 "71
 [e ( _mem_write (2 , -> -> 3 `i `ui -> -> 170 `i `uc ]
@@ -1870,9 +1859,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 146 ]
 }
 [v $root$_ints_isr `(v ~T0 @X0 0 e ]
-[v F1775 `(v ~T0 @X0 1 tf ]
+[v F1776 `(v ~T0 @X0 1 tf ]
 "74
-[v _ints_isr `IF1775 ~T0 @X0 1 e ]
+[v _ints_isr `IF1776 ~T0 @X0 1 e ]
 {
 [; ;panda17.c: 74: void interrupt ints_isr(void){
 [e :U _ints_isr ]
@@ -1885,12 +1874,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "77
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
 "78
-[v F1776 `b ~T0 @X0 1 s ferr ]
-[i F1776
+[v F1777 `b ~T0 @X0 1 s ferr ]
+[i F1777
 -> 0 `i
 ]
-[v F1777 `b ~T0 @X0 1 s oerr ]
-[i F1777
+[v F1778 `b ~T0 @X0 1 s oerr ]
+[i F1778
 -> 0 `i
 ]
 "79
@@ -1900,13 +1889,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _rcv -> -> 0 `i `uc ]
 [; ;panda17.c: 80: ferr = RCSTAbits.FERR;
 "80
-[e = F1776 -> . . _RCSTAbits 0 2 `b ]
+[e = F1777 -> . . _RCSTAbits 0 2 `b ]
 [; ;panda17.c: 81: oerr = RCSTAbits.OERR;
 "81
-[e = F1777 -> . . _RCSTAbits 0 1 `b ]
+[e = F1778 -> . . _RCSTAbits 0 1 `b ]
 [; ;panda17.c: 82: if (!ferr & !oerr){
 "82
-[e $ ! & ! F1776 ! F1777 149  ]
+[e $ ! & ! F1777 ! F1778 149  ]
 {
 [; ;panda17.c: 83: rcv = RCREG;
 "83
@@ -2021,24 +2010,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;panda17.c: 115: printf("%02x\t",aux2);
 "115
 [e ( _printf , (. :s 9C _aux2 ]
-[; ;panda17.c: 116: aux2 = mem_read(0xFFFE);
-"116
-[e = _aux2 -> ( _mem_read (1 -> 65534 `ui `ui ]
-[; ;panda17.c: 117: printf("%02x",aux2);
-"117
-[e ( _printf , (. :s 10C _aux2 ]
-[; ;panda17.c: 118: aux2 = mem_read(0xFFFF);
-"118
-[e = _aux2 -> ( _mem_read (1 -> 65535 `ui `ui ]
-[; ;panda17.c: 119: printf("%02x",aux2);
-"119
-[e ( _printf , (. :s 11C _aux2 ]
 [; ;panda17.c: 120: printf("\r\n");
 "120
-[e ( _printf :s 12C ]
+[e ( _printf :s 10C ]
 [; ;panda17.c: 121: printf("X");
 "121
-[e ( _printf :s 13C ]
+[e ( _printf :s 11C ]
 [; ;panda17.c: 122: PORTBbits.RB4 = 0;
 "122
 [e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
@@ -2066,13 +2043,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 163 ]
 [; ;panda17.c: 127: ferr = RCSTAbits.FERR;
 "127
-[e = F1776 -> . . _RCSTAbits 0 2 `b ]
+[e = F1777 -> . . _RCSTAbits 0 2 `b ]
 [; ;panda17.c: 128: oerr = RCSTAbits.OERR;
 "128
-[e = F1777 -> . . _RCSTAbits 0 1 `b ]
+[e = F1778 -> . . _RCSTAbits 0 1 `b ]
 [; ;panda17.c: 129: if (!ferr & !oerr){
 "129
-[e $ ! & ! F1776 ! F1777 164  ]
+[e $ ! & ! F1777 ! F1778 164  ]
 {
 [; ;panda17.c: 130: time[z] = RCREG;
 "130
@@ -2117,7 +2094,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;panda17.c: 141: printf("OK");
 "141
-[e ( _printf :s 14C ]
+[e ( _printf :s 12C ]
 "142
 }
 [e :U 166 ]
@@ -2139,7 +2116,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;panda17.c: 146: printf("%X ",ds_get(k));
 "146
-[e ( _printf , (. :s 15C -> ( _ds_get (1 _k `i ]
+[e ( _printf , (. :s 13C -> ( _ds_get (1 _k `i ]
 "147
 }
 "145
@@ -2157,13 +2134,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 171 ]
 [; ;panda17.c: 150: printf("I%04x;",si_read_h());
 "150
-[e ( _printf , (. :s 16C ( _si_read_h ..  ]
+[e ( _printf , (. :s 14C ( _si_read_h ..  ]
 [; ;panda17.c: 151: printf("%04x",si_read_t());
 "151
-[e ( _printf , (. :s 17C ( _si_read_t ..  ]
+[e ( _printf , (. :s 15C ( _si_read_t ..  ]
 [; ;panda17.c: 152: printf("X");
 "152
-[e ( _printf :s 18C ]
+[e ( _printf :s 16C ]
 [; ;panda17.c: 153: break;
 "153
 [e $U 150  ]
@@ -2202,330 +2179,343 @@ Version 3.2 HI-TECH Software Intermediate Code
 "164
 [e $ ! ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 173  ]
 {
-[; ;panda17.c: 165: led = 5;
+[; ;panda17.c: 165: PIE1bits.RCIE = 1;
 "165
-[e = _led -> -> 5 `i `uc ]
-[; ;panda17.c: 166: milis = 0;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;panda17.c: 166: led = 5;
 "166
-[e = _milis -> -> 0 `i `uc ]
-[; ;panda17.c: 167: secs = 0;
+[e = _led -> -> 5 `i `uc ]
+[; ;panda17.c: 167: milis = 0;
 "167
-[e = _secs -> -> 0 `i `ui ]
+[e = _milis -> -> 0 `i `uc ]
+[; ;panda17.c: 168: secs = 0;
 "168
-}
-[e :U 173 ]
-[; ;panda17.c: 168: }
-[; ;panda17.c: 169: if (PORTBbits.RB2){
+[e = _secs -> -> 0 `i `ui ]
 "169
-[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 174  ]
+}
+[; ;panda17.c: 169: }
+[e $U 174  ]
+"171
+[e :U 173 ]
+[; ;panda17.c: 171: else {
 {
-[; ;panda17.c: 170: if (mem_read(0x0003) != 0xAA){
-"170
+[; ;panda17.c: 172: PIE1bits.RCIE = 0;
+"172
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+[; ;panda17.c: 173: if (mem_read(0x0003) != 0xAA){
+"173
 [e $ ! != -> ( _mem_read (1 -> -> 3 `i `ui `i -> 170 `i 175  ]
 {
-[; ;panda17.c: 171: save_the_date();
-"171
+[; ;panda17.c: 174: save_the_date();
+"174
 [e ( _save_the_date ..  ]
-"172
+"175
 }
 [e :U 175 ]
-[; ;panda17.c: 172: }
-[; ;panda17.c: 173: milis++;
-"173
+[; ;panda17.c: 175: }
+[; ;panda17.c: 176: milis++;
+"176
 [e ++ _milis -> -> 1 `i `uc ]
-[; ;panda17.c: 174: if(milis > 6){
-"174
+[; ;panda17.c: 177: if(milis > 6){
+"177
 [e $ ! > -> _milis `i -> 6 `i 176  ]
 {
-[; ;panda17.c: 175: if (led > 0){
-"175
+[; ;panda17.c: 178: if (led > 0){
+"178
 [e $ ! > -> _led `i -> 0 `i 177  ]
 {
-[; ;panda17.c: 176: PORTBbits.RB4 = 1;
-"176
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
-[; ;panda17.c: 177: led--;
-"177
-[e -- _led -> -> 1 `i `uc ]
-"178
-}
-[; ;panda17.c: 178: }
-[e $U 178  ]
+[; ;panda17.c: 179: PORTBbits.RB4 = 1;
 "179
-[e :U 177 ]
-[; ;panda17.c: 179: else {
-{
-[; ;panda17.c: 180: PORTBbits.RB4 = 0;
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+[; ;panda17.c: 180: led--;
 "180
-[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e -- _led -> -> 1 `i `uc ]
 "181
 }
-[e :U 178 ]
 [; ;panda17.c: 181: }
-[; ;panda17.c: 182: secs++;
+[e $U 178  ]
 "182
-[e ++ _secs -> -> 1 `i `ui ]
-[; ;panda17.c: 183: milis = 0;
-"183
-[e = _milis -> -> 0 `i `uc ]
-[; ;panda17.c: 184: if (secs == 1){
-"184
-[e $ ! == _secs -> -> 1 `i `ui 179  ]
+[e :U 177 ]
+[; ;panda17.c: 182: else {
 {
-[; ;panda17.c: 185: condition = 2;
-"185
-[e = _condition -> -> 2 `i `uc ]
-"186
+[; ;panda17.c: 183: PORTBbits.RB4 = 0;
+"183
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+"184
 }
-[e :U 179 ]
-"187
+[e :U 178 ]
+[; ;panda17.c: 184: }
+[; ;panda17.c: 185: secs++;
+"185
+[e ++ _secs -> -> 1 `i `ui ]
+[; ;panda17.c: 186: milis = 0;
+"186
+[e = _milis -> -> 0 `i `uc ]
+"190
 }
 [e :U 176 ]
-[; ;panda17.c: 186: }
-[; ;panda17.c: 187: }
-[; ;panda17.c: 188: if (condition == 2){
-"188
-[e $ ! == -> _condition `i -> 2 `i 180  ]
-{
-[; ;panda17.c: 189: condition = 0;
-"189
-[e = _condition -> -> 0 `i `uc ]
-[; ;panda17.c: 190: secs = 0;
-"190
-[e = _secs -> -> 0 `i `ui ]
+[; ;panda17.c: 190: }
+[; ;panda17.c: 192: if (secs > 0){
 "192
+[e $ ! > _secs -> -> 0 `i `ui 179  ]
+{
+[; ;panda17.c: 194: secs = 0;
+"194
+[e = _secs -> -> 0 `i `ui ]
+[; ;panda17.c: 195: measure = 1;
+"195
+[e = _measure -> -> 1 `i `b ]
+"196
+}
+[e :U 179 ]
+"197
+}
+[e :U 174 ]
+[; ;panda17.c: 196: }
+[; ;panda17.c: 197: }
+[; ;panda17.c: 201: if (measure){
+"201
+[e $ ! _measure 180  ]
+{
+"202
 [v _arg `uc ~T0 @X0 1 a ]
-"193
+"203
 [v _temp_add `ui ~T0 @X0 1 a ]
 [v _hum_add `ui ~T0 @X0 1 a ]
 [v _up `ui ~T0 @X0 1 a ]
-"194
+"204
 [v _hum_val `ui ~T0 @X0 1 a ]
 [v _temp_val `ui ~T0 @X0 1 a ]
-[; ;panda17.c: 192: unsigned char arg;
-[; ;panda17.c: 193: unsigned int temp_add,hum_add,up;
-[; ;panda17.c: 194: unsigned int hum_val,temp_val;
-[; ;panda17.c: 196: hum_val = si_read_h();
-"196
-[e = _hum_val ( _si_read_h ..  ]
-[; ;panda17.c: 197: temp_val = si_read_t();
-"197
-[e = _temp_val ( _si_read_t ..  ]
-[; ;panda17.c: 199: hum_add = mem_read(0x000A);
-"199
-[e = _hum_add -> ( _mem_read (1 -> -> 10 `i `ui `ui ]
-[; ;panda17.c: 200: hum_add = hum_add << 8;
-"200
-[e = _hum_add << _hum_add -> 8 `i ]
-[; ;panda17.c: 201: hum_add += mem_read(0x000B);
-"201
-[e =+ _hum_add -> ( _mem_read (1 -> -> 11 `i `ui `ui ]
-[; ;panda17.c: 202: up = hum_add + 1;
-"202
-[e = _up + _hum_add -> -> 1 `i `ui ]
-[; ;panda17.c: 203: arg = up >> 8;
-"203
-[e = _arg -> >> _up -> 8 `i `uc ]
-[; ;panda17.c: 204: mem_write(0x000A,arg);
-"204
-[e ( _mem_write (2 , -> -> 10 `i `ui _arg ]
-[; ;panda17.c: 205: arg = up & 0x00FF;
+[; ;panda17.c: 202: unsigned char arg;
+[; ;panda17.c: 203: unsigned int temp_add,hum_add,up;
+[; ;panda17.c: 204: unsigned int hum_val,temp_val;
+[; ;panda17.c: 205: measure = 0;
 "205
-[e = _arg -> & _up -> -> 255 `i `ui `uc ]
-[; ;panda17.c: 206: mem_write(0x000B,arg);
-"206
-[e ( _mem_write (2 , -> -> 11 `i `ui _arg ]
-[; ;panda17.c: 207: hum_add = (hum_add * 2) + 1 + 0x000F;
+[e = _measure -> -> 0 `i `b ]
+[; ;panda17.c: 207: hum_val = si_read_h();
 "207
-[e = _hum_add + + * _hum_add -> -> 2 `i `ui -> -> 1 `i `ui -> -> 15 `i `ui ]
-[; ;panda17.c: 208: temp_add = mem_read(0x000C);
+[e = _hum_val ( _si_read_h ..  ]
+[; ;panda17.c: 208: temp_val = si_read_t();
 "208
-[e = _temp_add -> ( _mem_read (1 -> -> 12 `i `ui `ui ]
-[; ;panda17.c: 209: temp_add = temp_add << 8;
-"209
-[e = _temp_add << _temp_add -> 8 `i ]
-[; ;panda17.c: 210: temp_add += mem_read(0x000D);
+[e = _temp_val ( _si_read_t ..  ]
+[; ;panda17.c: 210: hum_add = mem_read(0x000A);
 "210
-[e =+ _temp_add -> ( _mem_read (1 -> -> 13 `i `ui `ui ]
-[; ;panda17.c: 211: up = temp_add + 1;
+[e = _hum_add -> ( _mem_read (1 -> -> 10 `i `ui `ui ]
+[; ;panda17.c: 211: hum_add = hum_add << 8;
 "211
-[e = _up + _temp_add -> -> 1 `i `ui ]
-[; ;panda17.c: 212: arg = up >> 8;
+[e = _hum_add << _hum_add -> 8 `i ]
+[; ;panda17.c: 212: hum_add += mem_read(0x000B);
 "212
-[e = _arg -> >> _up -> 8 `i `uc ]
-[; ;panda17.c: 213: mem_write(0x000C,arg);
+[e =+ _hum_add -> ( _mem_read (1 -> -> 11 `i `ui `ui ]
+[; ;panda17.c: 213: up = hum_add + 1;
 "213
-[e ( _mem_write (2 , -> -> 12 `i `ui _arg ]
-[; ;panda17.c: 214: arg = up & 0x00FF;
+[e = _up + _hum_add -> -> 1 `i `ui ]
+[; ;panda17.c: 214: arg = up >> 8;
 "214
-[e = _arg -> & _up -> -> 255 `i `ui `uc ]
-[; ;panda17.c: 215: mem_write(0x000D,arg);
+[e = _arg -> >> _up -> 8 `i `uc ]
+[; ;panda17.c: 215: mem_write(0x000A,arg);
 "215
-[e ( _mem_write (2 , -> -> 13 `i `ui _arg ]
-[; ;panda17.c: 216: temp_add = (temp_add * 2) + 1 + 0x7FF6;
+[e ( _mem_write (2 , -> -> 10 `i `ui _arg ]
+[; ;panda17.c: 216: arg = up & 0x00FF;
 "216
-[e = _temp_add + + * _temp_add -> -> 2 `i `ui -> -> 1 `i `ui -> -> 32758 `i `ui ]
-[; ;panda17.c: 218: arg = hum_val >> 8;
+[e = _arg -> & _up -> -> 255 `i `ui `uc ]
+[; ;panda17.c: 217: mem_write(0x000B,arg);
+"217
+[e ( _mem_write (2 , -> -> 11 `i `ui _arg ]
+[; ;panda17.c: 218: hum_add = (hum_add * 2) + 1 + 0x000F;
 "218
-[e = _arg -> >> _hum_val -> 8 `i `uc ]
-[; ;panda17.c: 219: mem_write(hum_add,arg);
+[e = _hum_add + + * _hum_add -> -> 2 `i `ui -> -> 1 `i `ui -> -> 15 `i `ui ]
+[; ;panda17.c: 219: temp_add = mem_read(0x000C);
 "219
-[e ( _mem_write (2 , _hum_add _arg ]
-[; ;panda17.c: 220: arg = hum_val & 0x00FF;
+[e = _temp_add -> ( _mem_read (1 -> -> 12 `i `ui `ui ]
+[; ;panda17.c: 220: temp_add = temp_add << 8;
 "220
-[e = _arg -> & _hum_val -> -> 255 `i `ui `uc ]
-[; ;panda17.c: 221: mem_write(hum_add + 1,arg);
+[e = _temp_add << _temp_add -> 8 `i ]
+[; ;panda17.c: 221: temp_add += mem_read(0x000D);
 "221
-[e ( _mem_write (2 , + _hum_add -> -> 1 `i `ui _arg ]
-[; ;panda17.c: 222: arg = (temp_val >> 8) & 0x00FF;
+[e =+ _temp_add -> ( _mem_read (1 -> -> 13 `i `ui `ui ]
+[; ;panda17.c: 222: up = temp_add + 1;
 "222
-[e = _arg -> & >> _temp_val -> 8 `i -> -> 255 `i `ui `uc ]
-[; ;panda17.c: 223: mem_write(temp_add,arg);
+[e = _up + _temp_add -> -> 1 `i `ui ]
+[; ;panda17.c: 223: arg = up >> 8;
 "223
-[e ( _mem_write (2 , _temp_add _arg ]
-[; ;panda17.c: 224: arg = temp_val & 0x00FF;
+[e = _arg -> >> _up -> 8 `i `uc ]
+[; ;panda17.c: 224: mem_write(0x000C,arg);
 "224
-[e = _arg -> & _temp_val -> -> 255 `i `ui `uc ]
-[; ;panda17.c: 225: mem_write(temp_add + 1,arg);
+[e ( _mem_write (2 , -> -> 12 `i `ui _arg ]
+[; ;panda17.c: 225: arg = up & 0x00FF;
 "225
-[e ( _mem_write (2 , + _temp_add -> -> 1 `i `ui _arg ]
+[e = _arg -> & _up -> -> 255 `i `ui `uc ]
+[; ;panda17.c: 226: mem_write(0x000D,arg);
+"226
+[e ( _mem_write (2 , -> -> 13 `i `ui _arg ]
+[; ;panda17.c: 227: temp_add = (temp_add * 2) + 1 + 0x7FF6;
 "227
+[e = _temp_add + + * _temp_add -> -> 2 `i `ui -> -> 1 `i `ui -> -> 32758 `i `ui ]
+[; ;panda17.c: 229: arg = hum_val >> 8;
+"229
+[e = _arg -> >> _hum_val -> 8 `i `uc ]
+[; ;panda17.c: 230: mem_write(hum_add,arg);
+"230
+[e ( _mem_write (2 , _hum_add _arg ]
+[; ;panda17.c: 231: arg = hum_val & 0x00FF;
+"231
+[e = _arg -> & _hum_val -> -> 255 `i `ui `uc ]
+[; ;panda17.c: 232: mem_write(hum_add + 1,arg);
+"232
+[e ( _mem_write (2 , + _hum_add -> -> 1 `i `ui _arg ]
+[; ;panda17.c: 233: arg = (temp_val >> 8) & 0x00FF;
+"233
+[e = _arg -> & >> _temp_val -> 8 `i -> -> 255 `i `ui `uc ]
+[; ;panda17.c: 234: mem_write(temp_add,arg);
+"234
+[e ( _mem_write (2 , _temp_add _arg ]
+[; ;panda17.c: 235: arg = temp_val & 0x00FF;
+"235
+[e = _arg -> & _temp_val -> -> 255 `i `ui `uc ]
+[; ;panda17.c: 236: mem_write(temp_add + 1,arg);
+"236
+[e ( _mem_write (2 , + _temp_add -> -> 1 `i `ui _arg ]
+"237
 }
 [e :U 180 ]
-"228
-}
-[e :U 174 ]
-[; ;panda17.c: 227: }
-[; ;panda17.c: 228: }
-[; ;panda17.c: 229: INTCONbits.GIE = 1;
-"229
+[; ;panda17.c: 237: }
+[; ;panda17.c: 240: INTCONbits.GIE = 1;
+"240
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"230
+"241
 }
 [e :U 172 ]
-[; ;panda17.c: 230: }
-[; ;panda17.c: 232: }
-"232
+[; ;panda17.c: 241: }
+[; ;panda17.c: 243: }
+"243
 [e :UE 147 ]
 }
-"234
+"245
 [v _init_timer2 `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
-[; ;panda17.c: 234: void init_timer2(unsigned char pre, unsigned char post, unsigned char eoc){
+[; ;panda17.c: 245: void init_timer2(unsigned char pre, unsigned char post, unsigned char eoc){
 [e :U _init_timer2 ]
 [v _pre `uc ~T0 @X0 1 r1 ]
 [v _post `uc ~T0 @X0 1 r2 ]
 [v _eoc `uc ~T0 @X0 1 r3 ]
 [f ]
-"235
+"246
 [v _sfr `uc ~T0 @X0 1 a ]
-[; ;panda17.c: 235: unsigned char sfr = 0x00;
+[; ;panda17.c: 246: unsigned char sfr = 0x00;
 [e = _sfr -> -> 0 `i `uc ]
-[; ;panda17.c: 236: PR2 = eoc;
-"236
+[; ;panda17.c: 247: PR2 = eoc;
+"247
 [e = _PR2 _eoc ]
-[; ;panda17.c: 237: sfr = ((post-1) << 3) & 0x78;
-"237
+[; ;panda17.c: 248: sfr = ((post-1) << 3) & 0x78;
+"248
 [e = _sfr -> & << - -> _post `i -> 1 `i -> 3 `i -> 120 `i `uc ]
-[; ;panda17.c: 238: sfr += 4;
-"238
+[; ;panda17.c: 249: sfr += 4;
+"249
 [e =+ _sfr -> -> 4 `i `uc ]
-[; ;panda17.c: 239: sfr += pre;
-"239
+[; ;panda17.c: 250: sfr += pre;
+"250
 [e =+ _sfr _pre ]
-[; ;panda17.c: 240: T2CON = sfr;
-"240
+[; ;panda17.c: 251: T2CON = sfr;
+"251
 [e = _T2CON _sfr ]
-[; ;panda17.c: 241: PIE1bits.TMR2IE = 1;
-"241
+[; ;panda17.c: 252: PIE1bits.TMR2IE = 1;
+"252
 [e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;panda17.c: 242: }
-"242
+[; ;panda17.c: 253: }
+"253
 [e :UE 181 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"246
+"257
 [v _main `(i ~T0 @X0 1 ef ]
 {
-[; ;panda17.c: 246: int main(void) {
+[; ;panda17.c: 257: int main(void) {
 [e :U _main ]
 [f ]
-[; ;panda17.c: 247: OSCCON = 0b01010001;
-"247
-[e = _OSCCON -> -> 81 `i `uc ]
-[; ;panda17.c: 248: INTCON = 0xC0;
-"248
-[e = _INTCON -> -> 192 `i `uc ]
-[; ;panda17.c: 250: TRISA = 0x00;
-"250
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;panda17.c: 251: TRISB = 0x00;
-"251
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;panda17.c: 252: ANSELHbits.ANS8 = 0;
-"252
-[e = . . _ANSELHbits 0 0 -> -> 0 `i `uc ]
-[; ;panda17.c: 253: TRISBbits.TRISB2 = 1;
-"253
-[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-[; ;panda17.c: 254: PORTBbits.RB4 = 0;
-"254
-[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
-[; ;panda17.c: 255: uart_init();
-"255
-[e ( _uart_init ..  ]
-[; ;panda17.c: 256: i2c_init();
-"256
-[e ( _i2c_init ..  ]
-[; ;panda17.c: 257: _delay((unsigned long)((10)*(2000000/4000.0)));
-"257
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
-[; ;panda17.c: 258: mem_init();
+[; ;panda17.c: 258: OSCCON = 0b01010001;
 "258
-[e ( _mem_init ..  ]
-[; ;panda17.c: 259: si_reset();
+[e = _OSCCON -> -> 81 `i `uc ]
+[; ;panda17.c: 259: INTCON = 0xC0;
 "259
-[e ( _si_reset ..  ]
-[; ;panda17.c: 260: fyh = 1;
-"260
-[e = _fyh -> -> 1 `i `b ]
-[; ;panda17.c: 263: _delay((unsigned long)((200)*(2000000/4000.0)));
+[e = _INTCON -> -> 192 `i `uc ]
+[; ;panda17.c: 261: TRISA = 0x00;
+"261
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;panda17.c: 262: TRISB = 0x00;
+"262
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;panda17.c: 263: ANSELHbits.ANS8 = 0;
 "263
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
-[; ;panda17.c: 264: init_timer2(2,5,250);
+[e = . . _ANSELHbits 0 0 -> -> 0 `i `uc ]
+[; ;panda17.c: 264: TRISBbits.TRISB2 = 1;
 "264
-[e ( _init_timer2 (3 , , -> -> 2 `i `uc -> -> 5 `i `uc -> -> 250 `i `uc ]
-[; ;panda17.c: 265: while(1){
+[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
+[; ;panda17.c: 265: PORTBbits.RB4 = 1;
 "265
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+[; ;panda17.c: 266: _delay((unsigned long)((1000)*(2000000/4000.0)));
+"266
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
+[; ;panda17.c: 267: PORTBbits.RB4 = 0;
+"267
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[; ;panda17.c: 268: uart_init();
+"268
+[e ( _uart_init ..  ]
+[; ;panda17.c: 269: i2c_init();
+"269
+[e ( _i2c_init ..  ]
+[; ;panda17.c: 270: _delay((unsigned long)((10)*(2000000/4000.0)));
+"270
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
+[; ;panda17.c: 271: mem_init();
+"271
+[e ( _mem_init ..  ]
+[; ;panda17.c: 272: si_reset();
+"272
+[e ( _si_reset ..  ]
+[; ;panda17.c: 273: fyh = 1;
+"273
+[e = _fyh -> -> 1 `i `b ]
+[; ;panda17.c: 274: measure = 0;
+"274
+[e = _measure -> -> 0 `i `b ]
+[; ;panda17.c: 276: _delay((unsigned long)((200)*(2000000/4000.0)));
+"276
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
+[; ;panda17.c: 277: init_timer2(2,5,250);
+"277
+[e ( _init_timer2 (3 , , -> -> 2 `i `uc -> -> 5 `i `uc -> -> 250 `i `uc ]
+[; ;panda17.c: 278: while(1){
+"278
 [e :U 184 ]
 {
-"266
+"279
 }
 [e :U 183 ]
-"265
+"278
 [e $U 184  ]
 [e :U 185 ]
-[; ;panda17.c: 266: }
-[; ;panda17.c: 267: }
-"267
+[; ;panda17.c: 279: }
+[; ;panda17.c: 280: }
+"280
 [e :UE 182 ]
 }
 [p f _printf 14712964 ]
 [a 2C 37 48 52 120 0 ]
 [a 3C 37 48 52 120 0 ]
-[a 17C 37 48 52 120 0 ]
-[a 10C 37 48 50 120 0 ]
-[a 11C 37 48 50 120 0 ]
+[a 15C 37 48 52 120 0 ]
 [a 4C 90 0 ]
-[a 13C 88 0 ]
-[a 18C 88 0 ]
-[a 14C 79 75 0 ]
-[a 16C 73 37 48 52 120 59 0 ]
+[a 11C 88 0 ]
+[a 16C 88 0 ]
+[a 12C 79 75 0 ]
+[a 14C 73 37 48 52 120 59 0 ]
 [a 5C 37 48 50 120 58 0 ]
 [a 7C 37 48 50 120 47 0 ]
 [a 8C 37 48 50 120 47 0 ]
 [a 6C 37 48 50 120 32 0 ]
-[a 15C 37 88 32 0 ]
+[a 13C 37 88 32 0 ]
 [a 1C 73 37 48 53 100 13 10 0 ]
-[a 12C 13 10 0 ]
+[a 10C 13 10 0 ]
 [a 9C 37 48 50 120 9 0 ]
